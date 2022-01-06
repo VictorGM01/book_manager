@@ -1,1 +1,1 @@
-# Gerenciador de Livros com Django
+# Gerenciador de Livros com Django e PostgreSQL
