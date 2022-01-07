@@ -1,7 +1,7 @@
 # Gerenciador de Livros com Django e PostgreSQL
 
 ## Descrição do Projeto
-Esta aplicação trata-se de um sistema web para gerenciamento e catalogação de livros, possibilitando o armazenamento
+Sistema web para gerenciamento e catalogação de livros, possibilitando o armazenamento
 destes livros em um banco de dados PostgreSQL e facilitando a vida das pessoas que, como nós ([Victor](https://github.com/VictorGM01)
 e [Rapha](https://github.com/raphaelaferraz)), não possuem muito controle sobre seus livros 😅
 
