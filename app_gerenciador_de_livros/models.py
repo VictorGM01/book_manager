@@ -7,5 +7,5 @@ class Livros(models.Model):
     autor = models.CharField(max_length=200)
     genero = models.CharField(max_length=200)
     estrelas = models.IntegerField()
-    situacao = models.CharField(blank=True)
-    opiniao = models.TextField(blank=True)
+    situacao = models.CharField(max_length=100, blank=True)
+    opiniao = models.TextField(max_length=500, blank=True)
