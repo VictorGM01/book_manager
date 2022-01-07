@@ -3,3 +3,11 @@ from .models import Livros
 
 # Registra banco de dados à página do admin
 admin.site.register(Livros)
+
+
+class ListaLivros(admin.ModelAdmin):
+    list_display = ('nome_do_livro', 'autor', 'estrelas', 'editora_do_livro', 'id')
+    list_display_links = ('nome_do_livro', 'id')
+    search_fields = ('nome_do_livro', 'genero')
+    list_filter = ('autor', 'estrelas')
+    list_per_page = 10
