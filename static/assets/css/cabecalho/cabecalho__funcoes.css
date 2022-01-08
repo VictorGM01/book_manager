@@ -13,7 +13,7 @@
   color: #f2f0f2;
 
   background-color: #05124a;
-  background-image: url('/static/assets/img/ilustracao-pesquisar.png');
+  background-image: url("{% static '/assets/img/ilustracao-pesquisar.png' %}");
   background-position: right;
   background-repeat: no-repeat;
   border: none;
