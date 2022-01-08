@@ -27,13 +27,13 @@
   padding-right: 1.5rem;
 }
 
-.cabecalho__funcoes-botao {
-  height: 2.625rem;
-
-  width: 2.625rem;
+.cabecalho__funcoes-link {
+  width: 2.6rem;
+  padding: 0.15rem;
+  transition: 0.42s;
 }
 
-.cabecalho__funcoes-botao:hover {
+.cabecalho__funcoes-link:hover {
   cursor: pointer;
   background-color: var(--azul-escuro-hover);
   border-radius: 8px;
