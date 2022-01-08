@@ -17,6 +17,13 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
 ## Status do Projeto :warning:
 #### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
 
+## Pré Requisitos
+Antes de começar, é preciso que você tenha instalado na sua máquina as seguintes ferramentas:
+
+[Git](https://git-scm.com/), [Python3](https://www.python.org/downloads/release/python-390/), [PostgreSQL](https://www.postgresql.org/download/windows/)
+
+Além disso, é interessante instalar uma IDE para conseguir rodar a aplicação de maneira simplificada. Recomendo o uso do [Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows)
+
 ## Desenvolvedores :octocat:
 <table>
     <tr>
