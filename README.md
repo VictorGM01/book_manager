@@ -7,6 +7,9 @@ e [Rapha](https://github.com/raphaelaferraz)), não possuem muito controle sobre
 
 Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django com a linguagem de programação Python e, para o front-end, HTML5 e CSS.
 
+## Status do Projeto
+#### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
+
 ## Desenvolvedores
 <table>
     <tr>
