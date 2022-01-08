@@ -1,3 +1,4 @@
+{% load static %}
 .cabecalho__funcoes {
   align-items: center;
 
@@ -12,7 +13,7 @@
   color: #f2f0f2;
 
   background-color: #05124a;
-  background-image: url('/gerenciador_de_livros/static/assets/img/ilustracao-pesquisar.png');
+  background-image: url('/static/assets/img/ilustracao-pesquisar.png');
   background-position: right;
   background-repeat: no-repeat;
   border: none;

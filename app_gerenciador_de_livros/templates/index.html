@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -8,14 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/normalize.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/reset.css"
-    />
+    <link rel="stylesheet" href="{% static '/assets/css/normalize.css'%}" />
+    <link rel="stylesheet" href="{% static '/assets/css/reset.css'%}" />
     <link
       rel="stylesheet"
       href="/gerenciador_de_livros/static/assets/css/base.css"
@@ -26,11 +21,12 @@
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__logo.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__funcoes.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes.css'%}"
+      type="text/css"
     />
     <title>Gerenciador de Livros</title>
   </head>
@@ -38,7 +34,7 @@
     <header class="cabecalho">
       <div class="cabecalho__logo">
         <img
-          src="/gerenciador_de_livros/static/assets/img/logo-livro.png"
+          src="{% static '/assets/img/logo-livro.png' %}"
           alt="Logotipo do site Gerenciador de Livros"
           class="cabecalho__logo-imagem"
         />
@@ -53,9 +49,9 @@
           class="cabecalho__funcoes-pesquisa"
           placeholder="Buscar"
         />
-        <a href="./index.html"
+        <a href="{% url 'index' %}"
           ><img
-            src="/gerenciador_de_livros/static/assets/img/ilustracao-casa.png"
+            src="{% static '/assets/img/ilustracao-casa.png'%}"
             alt="Botão para ínicio"
         /></a>
       </div>
