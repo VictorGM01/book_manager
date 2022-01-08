@@ -88,6 +88,12 @@ python manage.py createsuperuser
 # Digite o seu nome de administrador, crie e confirme sua senha e insira seu e-mail nos campos indicados
 ````
 
+### Subir servidor
+No terminal, digite:
+
+`python manage.py runserver`
+
+Depois, clique no link que será gerado
 
 ## Desenvolvedores :octocat:
 <table>
