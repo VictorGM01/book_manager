@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -16,7 +17,7 @@
     <header class="cabecalho">
       <div class="cabecalho__logo">
         <img
-          src="/gerenciador_de_livros/static/assets/img/logo-livro.png"
+          src="{% static '/assets/img/logo-livro.png' %}"
           alt="Logotipo do site Gerenciador de Livros"
           class="cabecalho__logo-imagem"
         />
