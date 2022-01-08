@@ -10,9 +10,9 @@
 }
 
 .cabecalho__funcoes-pesquisa {
-  color: #f2f0f2;
+  color: var(--esbranquicado);
 
-  background-color: #05124a;
+  background-color: var(--azul-escuro-bg);
   background-image: url('/static/assets/img/ilustracao-pesquisar.png');
   background-position: right;
   background-repeat: no-repeat;
@@ -35,4 +35,7 @@
 
 .cabecalho__funcoes-botao:hover {
   cursor: pointer;
+  background-color: var(--azul-escuro-hover);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
 }

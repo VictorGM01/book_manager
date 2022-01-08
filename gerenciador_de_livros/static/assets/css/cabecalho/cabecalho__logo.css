@@ -7,7 +7,7 @@
 }
 
 .cabecalho__logo-titulo {
-  color: #f2f0f2;
+  color: var(--esbranquicado);
 
   font-family: 'Prata', serif;
   font-size: 24px;
