@@ -9,7 +9,7 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
 
 <h1 align="center">
     <img src="https://img.shields.io/static/v1?label=DJANGO&message=FRAMEWORK&color=brightgreen&style=for-the-badge&logo=DJANGO&logoColor=green"/>
-    <img src="https://img.shields.io/static/v1?label=POSTGRESQL&message=BD&color=purple&style=for-the-badge&logo=POSTGRESQL&logoColor=purple"/>
+    <img src="https://img.shields.io/static/v1?label=POSTGRESQL&message=10.9.1&color=purple&style=for-the-badge&logo=POSTGRESQL&logoColor=purple"/>
     <img src="https://img.shields.io/static/v1?label=PYTHON&message=3.9.9&color=blue&style=for-the-badge&logo=Python"/>
     <img src="https://img.shields.io/static/v1?label=DJANGO&message=4.0.1&color=green&style=for-the-badge"/>
 </h1>
