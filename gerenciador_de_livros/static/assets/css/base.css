@@ -1,0 +1,11 @@
+:root {
+  --azul-escuro-bg: #05124a;
+  --azul-celeste-escuro: #384996;
+  --esbranquicado: #f2f0f2;
+  --azul-escuro-hover: #1a2f8d;
+  --azul-claro: #4b62c9;
+}
+
+body {
+  background-color: var(--azul-escuro-bg);
+}
