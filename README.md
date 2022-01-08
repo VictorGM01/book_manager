@@ -44,14 +44,19 @@ pip install django
 Após instalar o banco de dados, conforme solicitado em [Pré Requisitos](#pré-requisitos), crie um servidor chamado livros:
 
 - Clique com o botão direito em 'Servidores':
+
 ![pgadmin.png](assets/img/pgadmin.png)
 - Clique em Create e depois em Server:
+
 ![createserver.png](assets/img/createserver.png)
 - Uma nova janela será aberta. Defina o nome como 'livros'. Em "Connection", defina o host como localhost e em password coloque a senha do seu PostgreSQL:
+
 ![connection.png](assets/img/connection.png)
 - Após Criar o servidor, clique com o botão direito em databases e crie um:
+
 ![createdatabase.png](assets/img/createdatabase.png)
 - Defina o nome do database como 'book_manager':
+
 ![databasename.png](assets/img/databasename.png)
 
 ### Configurando conexão com o banco de dados
@@ -66,11 +71,13 @@ pip install psycopg2-binary
 
 - Abra o arquivo settings.py, na pasta gerenciador_de_livros
 - Na linha 71, substitua USER pelo nome do seu usuário do servidor do PostgreSQL (para verificar o nome, abra o postgresql novamente, clique com o botão direito do mouse sobre o servidor que você criou (livros), clique em properties e depois em connection):
-![linha71.png](assets/img/linha71.png)
-Obs.: Geralmente, o seu código deverá ficar assim: 'USER': 'postgres'
+- ![linha71.png](assets/img/linha71.png)
+
+  Obs.: Geralmente, o seu código deverá ficar assim: 'USER': 'postgres'
 - Na linha 72, substitua PASSWORD pela sua senha do postreSQL:
-![linha72.png](assets/img/linha72.png)
-Ex.: 'PASSWORD': 'senhadedemonstracao'
+- ![linha72.png](assets/img/linha72.png)
+
+  Ex.: 'PASSWORD': 'senhadedemonstracao'
 
 ### Criar Django-admin
 No terminal, siga os seguintes passos:
