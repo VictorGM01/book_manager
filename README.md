@@ -36,8 +36,13 @@ venv\Scripts\activate
 # Depois de criada, ative-a digitando no terminal (MAC ou LINUX):
 source /venv/bin/activate
 
+# OBS.: A Venv sempre precisará estar ativada para que o servidor rode
+
 # Instale o Django com pip install
 pip install django
+
+# Carregue os arquivos de estilização do site para o django
+python manage.py collectstatic
 ````
 
 ### Configurar Banco de Dados
@@ -78,6 +83,15 @@ pip install psycopg2-binary
 - ![linha72.png](assets/img/linha72.png)
 
   Ex.: 'PASSWORD': 'senhadedemonstracao'
+
+### Migrar modelo para o banco de dados
+````bash
+# Prepare o ambiente de migração:
+python manage.py makemigrations
+
+# Em seguida, faça a migração do modelo para o banco:
+python manage.py migrate
+````
 
 ### Criar Django-admin
 No terminal, siga os seguintes passos:
