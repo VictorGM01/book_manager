@@ -1,5 +1,12 @@
 from django.shortcuts import render
+from .models import Livros
 
 
 def index(request):
-    return render(request, 'index.html')
+    livros = Livros.objects.all()
+
+    dados = {
+        'livros': livros
+    }
+
+    return render(request, 'index.html', dados)
