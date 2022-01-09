@@ -1,0 +1,41 @@
+{% load static %}
+.cabecalho__funcoes {
+  align-items: center;
+
+  display: flex;
+
+  gap: 1.5625rem;
+
+  margin-right: 2.125rem;
+}
+
+.cabecalho__funcoes-pesquisa {
+  color: var(--esbranquicado);
+
+  background-color: var(--azul-escuro-bg);
+  background-image: url('/static/assets/img/ilustracao-pesquisar.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 8px;
+
+  font-family: 'Roboto Mono', monospace;
+
+  height: 2.2rem;
+
+  padding-left: 0.875rem;
+  padding-right: 1.5rem;
+}
+
+.cabecalho__funcoes-link {
+  width: 2.6rem;
+  padding: 0.15rem;
+  transition: 0.42s;
+}
+
+.cabecalho__funcoes-link:hover {
+  cursor: pointer;
+  background-color: var(--azul-escuro-hover);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}

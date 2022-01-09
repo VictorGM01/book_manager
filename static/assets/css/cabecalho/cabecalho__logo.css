@@ -1,0 +1,19 @@
+.cabecalho__logo {
+  align-items: center;
+
+  display: flex;
+
+  margin-left: 2.125rem;
+}
+
+.cabecalho__logo-titulo {
+  color: var(--esbranquicado);
+
+  font-family: 'Prata', serif;
+  font-size: 24px;
+  font-weight: 100;
+
+  letter-spacing: 1px;
+
+  margin-left: 0.4375rem;
+}
