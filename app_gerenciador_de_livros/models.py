@@ -9,3 +9,5 @@ class Livros(models.Model):
     estrelas = models.IntegerField(blank=True, null=True)
     situacao = models.CharField(max_length=100, blank=True)
     opiniao = models.TextField(max_length=500, blank=True)
+    class Meta:
+        ordering = ['nome_do_livro']
