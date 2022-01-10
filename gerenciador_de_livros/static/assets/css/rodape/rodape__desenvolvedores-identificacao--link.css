@@ -1,0 +1,13 @@
+.rodape__desenvolvedores-identificacao--link {
+  align-items: center;
+
+  color: var(--esbranquicado);
+
+  display: flex;
+
+  gap: 0.58rem;
+
+  justify-content: center;
+
+  text-decoration: none;
+}
