@@ -6,6 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="icon"
+      href="/gerenciador_de_livros/static/assets/img/logo-livro-pequeno.png"
+      type="image/png"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
@@ -34,12 +39,30 @@
       rel="stylesheet"
       href="{% static '/assets/css/titulo/titulo__sublinhado.css'%}"
     />
-    <link rel="stylesheet" href="{% static '/assets/css/principal/bloco-livros.css'%}">
-    <link rel="stylesheet" href="{% static '/assets/css/principal/conteudo-livro.css' %}">
-    <link rel="stylesheet" href="{% static '/assets/css/principal/conteudo-livro__caixa-imagem.css' %}">
-    <link rel="stylesheet" href="{% static '/assets/css/principal/conteudo-livro__caixa-linha.css' %}">
-    <link rel="stylesheet" href="{% static '/assets/css/principal/conteudo-livro__caixa-titulo.css' %}">
-    <link rel="stylesheet" href="{% static '/assets/css/principal/conteudo-livro__caixa.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/bloco-livros.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-imagem.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-linha.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-titulo.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa.css' %}"
+    />
     <title>Gerenciador de Livros</title>
   </head>
   <body>
@@ -76,8 +99,7 @@
       </section>
 
       <section class="bloco-livros">
-        {% if livros %}
-        {% for livro in livros %}
+        {% if livros %} {% for livro in livros %}
         <section class="conteudo-livro">
           <div class="conteudo-livro__caixa">
             <img
@@ -87,15 +109,13 @@
               width="220"
             />
             <div class="conteudo-livro__caixa-linha"></div>
-            <div class="conteudo-livro__caixa-titulo">{{livro.nome_do_livro}}</div>
+            <div class="conteudo-livro__caixa-titulo">
+              {{livro.nome_do_livro}}
+            </div>
           </div>
         </section>
-        {% endfor %}
-        {% else %}
-        {% endif %}
-
+        {% endfor %} {% else %} {% endif %}
       </section>
-
     </main>
   </body>
 </html>
