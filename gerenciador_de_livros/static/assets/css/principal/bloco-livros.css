@@ -6,6 +6,5 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  margin-top: 2.8125rem;
-  margin-bottom: 3rem;
+  margin: 2.8125rem 0 3rem 0;
 }
