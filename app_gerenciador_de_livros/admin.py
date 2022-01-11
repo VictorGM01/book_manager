@@ -6,7 +6,7 @@ class ListaLivros(admin.ModelAdmin):
     list_display = ('nome_do_livro', 'autor', 'estrelas', 'editora_do_livro', 'situacao', 'id')
     list_display_links = ('nome_do_livro', 'id')
     search_fields = ('nome_do_livro', 'generos')
-    list_filter = ('autor', 'estrelas', 'editora_do_livro', 'situacao')
+    list_filter = ('situacao', 'estrelas', 'autor', 'editora_do_livro')
     list_per_page = 10
 
     def get_queryset(self, request):
