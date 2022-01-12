@@ -1,0 +1,11 @@
+.cabecalho__logo--link {
+  align-items: center;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  text-decoration: none;
+}
