@@ -103,8 +103,14 @@
       rel="stylesheet"
       href="{% static '/assets/css/rodape/rodape__github.css' %}"
     />
-    <link rel="stylesheet" href="{% static '/assets/css/link-topo/principal__link.css'%}">
-    <link rel="stylesheet" href="{% static '/assets/css/link-topo/principal__link-topo.css'%}">
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/link-topo/principal__link.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/link-topo/principal__link-topo.css'%}"
+    />
     <title>Gerenciador de Livros</title>
   </head>
   <body>
@@ -160,11 +166,33 @@
         </section>
         {% endfor %} {% else %} {% endif %}
       </section>
+      <section class="principal__primeiro-acesso">
+        <div class="principal__primeiro-acesso--imagem">
+          <img
+            class="primeiro-acesso__imagem"
+            src="/gerenciador_de_livros/static/assets/img/icone-livro-adicionar.png"
+            alt="Ícone de adicionar o primeiro livro"
+          />
+        </div>
+        <h5 class="principal__primeiro-acesso--titulo">
+          Você ainda não catalogou nenhum livro!<br />
+          Clique no botão abaixo para adicionar seu primeiro livro:
+        </h5>
+        <a
+          class="principal__primeiro-acesso--link"
+          href="#"
+          title="Adicione seu primeiro livro"
+          >Adicione seu primeiro livro</a
+        >
+      </section>
     </main>
 
     <footer class="rodape">
       <div class="principal__link" id="link-scroll">
-        <a class="principal__link-topo" href="{% url 'index' %}" title="Voltar ao topo"
+        <a
+          class="principal__link-topo"
+          href="{% url 'index' %}"
+          title="Voltar ao topo"
           >&#9651;</a
         >
       </div>
@@ -216,5 +244,7 @@
       </div>
     </footer>
   </body>
-  <script src="{% static '/assets/js/script.js'%}"> defer </script>
+  <script src="{% static '/assets/js/script.js'%}">
+    defer
+  </script>
 </html>
