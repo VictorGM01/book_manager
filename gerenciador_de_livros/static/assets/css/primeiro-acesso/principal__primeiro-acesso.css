@@ -1,0 +1,13 @@
+.principal__primeiro-acesso {
+  align-items: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin: 2rem 14rem 0 14rem;
+
+  min-height: 50vh;
+}
