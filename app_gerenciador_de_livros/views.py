@@ -3,7 +3,7 @@ from .models import Livros
 
 
 def index(request):
-    livros = Livros.objects.all()
+    livros = Livros.objects.order_by('nome_do_livro')
 
     dados = {
         'livros': livros
