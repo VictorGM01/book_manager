@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Livros
+from .models import Livros, StatusLivro
 
 
 class ListaLivros(admin.ModelAdmin):
@@ -16,3 +16,4 @@ class ListaLivros(admin.ModelAdmin):
 
 # Registra banco de dados à página do admin
 admin.site.register(Livros, ListaLivros)
+admin.site.register(StatusLivro)
