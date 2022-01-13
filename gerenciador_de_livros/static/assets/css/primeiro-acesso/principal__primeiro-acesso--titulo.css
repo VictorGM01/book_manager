@@ -1,0 +1,11 @@
+.principal__primeiro-acesso--titulo {
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+  font-weight: 100;
+
+  line-height: 2rem;
+
+  text-align: center;
+}
