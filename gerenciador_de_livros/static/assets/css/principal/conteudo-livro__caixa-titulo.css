@@ -6,3 +6,9 @@
 
   text-align: center;
 }
+
+.conteudo-livro__caixa-titulo:hover {
+  cursor: pointer;
+
+  color: var(--azul-bem-claro);
+}
