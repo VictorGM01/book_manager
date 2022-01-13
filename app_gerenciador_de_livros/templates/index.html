@@ -165,7 +165,8 @@
       </section>
 
       <section class="bloco-livros">
-        {% if livros %} {% for livro in livros %}
+        {% if livros %}
+            {% for livro in livros %}
         <section class="conteudo-livro">
           <div class="conteudo-livro__caixa">
             <img
@@ -180,7 +181,7 @@
             </div>
           </div>
         </section>
-        {% endfor %}
+            {% endfor %}
       </section>
         {% else %}
       <section class="principal__primeiro-acesso">
