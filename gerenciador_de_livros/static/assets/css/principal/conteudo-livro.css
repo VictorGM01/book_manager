@@ -14,3 +14,13 @@
 
   width: 23.1875rem;
 }
+
+.conteudo-livro:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 73, 150, 1) 0%,
+    rgba(63, 110, 180, 1) 91%
+  );
+
+  padding: 0.5rem;
+}
