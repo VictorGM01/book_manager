@@ -113,19 +113,19 @@
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/primeiro-acesso/principal__primeiro-acesso.css"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/primeiro-acesso/principal__primeiro-acesso--titulo.css"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--titulo.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/primeiro-acesso/principal__primeiro-acesso--link.css"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--link.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css'%}"
     />
     <title>Gerenciador de Livros</title>
   </head>
@@ -180,13 +180,14 @@
             </div>
           </div>
         </section>
-        {% endfor %} {% else %} {% endif %}
+        {% endfor %}
       </section>
+        {% else %}
       <section class="principal__primeiro-acesso">
         <div class="principal__primeiro-acesso--imagem">
           <img
             class="primeiro-acesso__imagem"
-            src="/gerenciador_de_livros/static/assets/img/icone-livro-adicionar.png"
+            src="{%  static '/assets/img/icone-livro-adicionar.png' %}"
             alt="Ícone de adicionar o primeiro livro"
           />
         </div>
@@ -196,11 +197,12 @@
         </h5>
         <a
           class="principal__primeiro-acesso--link"
-          href="#"
+          href="{% url 'admin:index' %}"
           title="Adicione seu primeiro livro"
           >Adicione seu primeiro livro</a
         >
       </section>
+        {% endif %}
     </main>
 
     <footer class="rodape">
