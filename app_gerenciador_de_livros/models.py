@@ -7,8 +7,4 @@ class Livros(models.Model):
     autor = models.CharField(max_length=200)
     generos = models.CharField(max_length=200)
     estrelas = models.IntegerField(blank=True, null=True)
-    situacao = models.CharField(max_length=100, blank=True)
     opiniao = models.TextField(max_length=500, blank=True)
-
-    class Meta:
-        ordering = ['autor']
