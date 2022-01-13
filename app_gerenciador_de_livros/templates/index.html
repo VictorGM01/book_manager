@@ -103,6 +103,8 @@
       rel="stylesheet"
       href="{% static '/assets/css/rodape/rodape__github.css' %}"
     />
+    <link rel="stylesheet" href="/gerenciador_de_livros/static/assets/css/link-topo/principal__link.css">
+    <link rel="stylesheet" href="/gerenciador_de_livros/static/assets/css/link-topo/principal__link-topo.css">
     <title>Gerenciador de Livros</title>
   </head>
   <body>
@@ -161,6 +163,11 @@
     </main>
 
     <footer class="rodape">
+      <div class="principal__link" id="link-scroll">
+        <a class="principal__link-topo" href="#inicio" title="Voltar ao topo"
+          >&#9651;</a
+        >
+      </div>
       <div class="rodape__desenvolvedores">
         <h3 class="rodape__desenvolvedores-titulo">Desenvolvedores:</h3>
         <div class="rodape__desenvolvedores-identificacao">
@@ -209,4 +216,5 @@
       </div>
     </footer>
   </body>
+  <script src="/gerenciador_de_livros/static/assets/js/script.js" defer></script>
 </html>

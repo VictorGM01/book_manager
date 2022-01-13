@@ -1,0 +1,13 @@
+.principal__link-topo {
+  color: var(--esbranquicado);
+
+  display: flex;
+
+  font-size: 20px;
+
+  justify-content: center;
+
+  margin-top: 0.4rem;
+
+  text-decoration: none;
+}
