@@ -27,11 +27,11 @@
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__logo--titulo.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo--titulo.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__logo--link.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo--link.css'%}"
     />
     <link
       rel="stylesheet"
@@ -40,11 +40,11 @@
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__funcoes-pesquisa.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes-pesquisa.css'%}"
     />
     <link
       rel="stylesheet"
-      href="/gerenciador_de_livros/static/assets/css/cabecalho/cabecalho__funcoes-link.css"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes-link.css'%}"
     />
     <link
       rel="stylesheet"
@@ -103,8 +103,8 @@
       rel="stylesheet"
       href="{% static '/assets/css/rodape/rodape__github.css' %}"
     />
-    <link rel="stylesheet" href="/gerenciador_de_livros/static/assets/css/link-topo/principal__link.css">
-    <link rel="stylesheet" href="/gerenciador_de_livros/static/assets/css/link-topo/principal__link-topo.css">
+    <link rel="stylesheet" href="{% static '/assets/css/link-topo/principal__link.css'%}">
+    <link rel="stylesheet" href="{% static '/assets/css/link-topo/principal__link-topo.css'%}">
     <title>Gerenciador de Livros</title>
   </head>
   <body>
@@ -116,7 +116,7 @@
             alt="Logotipo do site Gerenciador de Livros"
             class="cabecalho__logo-imagem"
           />
-          <h2 class="cabecalho__logo-titulo">Gerenciador de Livros</h>
+          <h2 class="cabecalho__logo-titulo">Gerenciador de Livros</h2>
         </a>
       </div>
 
@@ -164,7 +164,7 @@
 
     <footer class="rodape">
       <div class="principal__link" id="link-scroll">
-        <a class="principal__link-topo" href="#inicio" title="Voltar ao topo"
+        <a class="principal__link-topo" href="{% url 'index' %}" title="Voltar ao topo"
           >&#9651;</a
         >
       </div>
@@ -216,5 +216,5 @@
       </div>
     </footer>
   </body>
-  <script src="/gerenciador_de_livros/static/assets/js/script.js" defer></script>
+  <script src="{% static '/static/assets/js/script.js" defer></script'%}"
 </html>
