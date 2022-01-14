@@ -10,3 +10,20 @@ def index(request):
     }
 
     return render(request, 'index.html', dados)
+
+
+def buscar(request):
+    lista_livros = Livros.objects.all()
+
+    if "buscar" in request.GET:
+        nome_a_buscar = request.GET['buscar']
+
+        if buscar:
+            lista_livros = lista_livros.filter(nome_do_livro__icontains=nome_a_buscar)
+
+    dados = {
+        'livros': lista_livros
+    }
+
+    return render(request, 'buscar.html', dados)
+
