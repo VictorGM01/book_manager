@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      href="{% static '/assets/img/logo-livro-pequeno.png' %}"
+      type="image/png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prata&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static '/assets/css/normalize.css'%}" />
+    <link rel="stylesheet" href="{% static '/assets/css/reset.css'%}" />
+    <link rel="stylesheet" href="{% static '/assets/css/base.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo--titulo.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__logo--link.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes.css'%}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes-pesquisa.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/cabecalho/cabecalho__funcoes-link.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/titulo/bloco-titulo.css'%}"
+    />
+    <link rel="stylesheet" href="{% static '/assets/css/titulo/titulo.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/titulo/titulo__sublinhado.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/bloco-livros.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-imagem.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-linha.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa-titulo.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/principal/conteudo-livro__caixa.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape__desenvolvedores-identificacao--link.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape__desenvolvedores-identificacao.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape__desenvolvedores-titulo.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape__desenvolvedores.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/rodape/rodape__github.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/link-topo/principal__link.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/link-topo/principal__link-topo.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--titulo.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--link.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css'%}"
+    />
+    <title>Gerenciador de Livros</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="cabecalho__logo">
+        <a href="{% url 'index' %}" class="cabecalho__logo--link">
+          <img
+            src="{% static '/assets/img/logo-livro.png' %}"
+            alt="Logotipo do site Gerenciador de Livros"
+            class="cabecalho__logo-imagem"
+          />
+          <h2 class="cabecalho__logo-titulo">Gerenciador de Livros</h2>
+        </a>
+      </div>
+
+      <div class="cabecalho__funcoes">
+        <form action="{% url 'buscar' %}">
+          <input
+            type="search"
+            name="buscar"
+            class="cabecalho__funcoes-pesquisa"
+            placeholder="Buscar"
+          />
+        </form>
+        <a href="{% url 'index' %}" class="cabecalho__funcoes-link"
+          ><img
+            src="{% static '/assets/img/ilustracao-casa.png'%}"
+            alt="Botão para ínicio"
+        /></a>
+      </div>
+    </header>
+
+    <main class="principal">
+      <section class="bloco-titulo">
+        <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
+        <div class="titulo__sublinhado"></div>
+      </section>
+
+      <section class="bloco-livros">
+        {% if livros %}
+            {% for livro in livros %}
+        <section class="conteudo-livro">
+          <div class="conteudo-livro__caixa">
+            <img
+              src="{% static '/assets/img/ilustracao-livros.png' %}"
+              alt="Imagem de capa do Livro"
+              class="conteudo-livro__caixa-imagem"
+              width="220"
+            />
+            <div class="conteudo-livro__caixa-linha"></div>
+            <div class="conteudo-livro__caixa-titulo">
+              {{livro.nome_do_livro}}
+            </div>
+          </div>
+        </section>
+            {% endfor %}
+      </section>
+        {% else %}
+            <p>Livro não encontrado :(</p>
+        {% endif %}
+    </main>
+
+    <footer class="rodape">
+      <div class="principal__link" id="link-scroll">
+        <a
+          class="principal__link-topo"
+          href="{% url 'index' %}"
+          title="Voltar ao topo"
+          >&#9651;</a
+        >
+      </div>
+      <div class="rodape__desenvolvedores">
+        <h3 class="rodape__desenvolvedores-titulo">Desenvolvedores:</h3>
+        <div class="rodape__desenvolvedores-identificacao">
+          <a
+            href="https://www.linkedin.com/in/victor-gabriel-marques-4a327a208/"
+            class="rodape__desenvolvedores-identificacao--link"
+            target="__blank"
+          >
+            <img
+              src="{% static '/assets/img/imagem-victor.png' %}"
+              alt="Imagem de Perfil de Victor Gabriel Marques"
+              class="rodape__desenvolvedores-identificacao--imagem"
+            />
+            <p class="rodape__desenvolvedores-identificacao--Victor">
+              Victor G. Marques
+            </p>
+          </a>
+        </div>
+        <div class="rodape__desenvolvedores-identificacao">
+          <a
+            href="https://www.linkedin.com/in/raphaela-guiland-ferraz-32a980214/"
+            target="__blank"
+            class="rodape__desenvolvedores-identificacao--link"
+          >
+            <img
+              src="{% static '/assets/img/imagem-rapha.png' %}"
+              alt="Imagem de Perfil de Raphaela Guiland Ferraz"
+              class="rodape__desenvolvedores-identificacao--imagem"
+            />
+            <p class="rodape__desenvolvedores-identificacao--Rapha">
+              Raphaela G. Ferraz
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="rodape__github">
+        <a
+          href="https://github.com/VictorGM01/book_manager"
+          target="__blank"
+          class="rodape__github-link"
+          ><img
+            src="{% static '/assets/img/icone-github.png' %}"
+            alt="ícone do github"
+            class="rodape__github-imagem"
+        /></a>
+      </div>
+    </footer>
+  </body>
+  <script src="{% static '/assets/js/script.js'%}">
+    defer
+  </script>
+</html>
