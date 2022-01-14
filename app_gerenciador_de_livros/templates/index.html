@@ -143,13 +143,14 @@
       </div>
 
       <div class="cabecalho__funcoes">
-        <input
-          type="text"
-          name="pesquisa"
-          id="pesquisa"
-          class="cabecalho__funcoes-pesquisa"
-          placeholder="Buscar"
-        />
+        <form action="">
+          <input
+            type="search"
+            name="buscar"
+            class="cabecalho__funcoes-pesquisa"
+            placeholder="Buscar"
+          />
+        </form>
         <a href="{% url 'index' %}" class="cabecalho__funcoes-link"
           ><img
             src="{% static '/assets/img/ilustracao-casa.png'%}"
