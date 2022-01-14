@@ -20,34 +20,8 @@
 {% endblock %}
 {% block body %}
   <body>
-    <header class="cabecalho">
-      <div class="cabecalho__logo">
-        <a href="{% url 'index' %}" class="cabecalho__logo--link">
-          <img
-            src="{% static '/assets/img/logo-livro.png' %}"
-            alt="Logotipo do site Gerenciador de Livros"
-            class="cabecalho__logo-imagem"
-          />
-          <h2 class="cabecalho__logo-titulo">Gerenciador de Livros</h2>
-        </a>
-      </div>
 
-      <div class="cabecalho__funcoes">
-        <form action="{% url 'buscar' %}">
-          <input
-            type="search"
-            name="buscar"
-            class="cabecalho__funcoes-pesquisa"
-            placeholder="Buscar"
-          />
-        </form>
-        <a href="{% url 'index' %}" class="cabecalho__funcoes-link"
-          ><img
-            src="{% static '/assets/img/ilustracao-casa.png'%}"
-            alt="Botão para ínicio"
-        /></a>
-      </div>
-    </header>
+    {% include 'partials/_header.html' %}
 
     <main class="principal">
       <section class="bloco-titulo">
