@@ -1,4 +1,8 @@
-{% extends 'base.html' %} {% load static %} {% block body %}
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
+{% endblock %}
+{% block body %}
 <body>
   {% include 'partials/_header.html' %}
 
@@ -47,7 +51,7 @@
       <div class="titulo--pesquisa-importante__sublinhado"></div>
       <div class="bloco-titulo__imagem-negativo">
         <img
-          src="/gerenciador_de_livros/static/assets/img/icone-livro-importante.png"
+          src="{% static '/assets/img/icone-livro-importante.png'%}"
           alt="ícone de alerta para pesquisa não encontrada"
           class="pesquisa-importante__imagem"
         />
