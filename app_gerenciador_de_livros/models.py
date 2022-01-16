@@ -16,3 +16,4 @@ class Livros(models.Model):
     situacao = models.ForeignKey(StatusLivro, on_delete=models.CASCADE)
     estrelas = models.IntegerField(blank=True, null=True)
     opiniao = models.TextField(max_length=500, blank=True)
+    foto_do_livro = models.ImageField(upload_to='imagens/%d/%m', blank=True)
