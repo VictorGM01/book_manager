@@ -1,11 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block link %}
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/pesquisa-importante/bloco-titulo__imagem-negativo.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/pesquisa-importante/subtitulo--pesquisa-importante.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/pesquisa-importante/titulo--pesquisa-importante.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/pesquisa-importante/titulo--pesquisa-importante__sublinhado.css'%}"
+    />
 {% endblock %}
 {% block body %}
 <body>
   {% include 'partials/_header.html' %}
-
+  {% if livros %}
   <main class="principal">
     <section class="bloco-titulo">
       <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
@@ -13,7 +29,7 @@
     </section>
 
     <section class="bloco-livros">
-      {% if livros %} {% for livro in livros %}
+    {% for livro in livros %}
       <section class="conteudo-livro">
         <div class="conteudo-livro__caixa">
           <img
@@ -28,7 +44,7 @@
           </div>
         </div>
       </section>
-      {% endfor %}
+    {% endfor %}
       <div class="rodape__adiciona" id="add-scroll">
         <a
           href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
