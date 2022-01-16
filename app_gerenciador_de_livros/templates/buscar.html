@@ -45,19 +45,6 @@
         </div>
       </section>
     {% endfor %}
-      <div class="rodape__adiciona" id="add-scroll">
-        <a
-          href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
-          class="rodape__adiciona--link"
-          title="Adicionar novo livro"
-        >
-          <img
-            src="{% static '/assets/img/icone-mais.png'%}"
-            alt="ícone de mais"
-            class="rodape__adiciona--imagem"
-          />
-        </a>
-      </div>
     </section>
     {% else %}
     <section class="bloco-titulo">
@@ -77,6 +64,19 @@
       </h5>
     </section>
     {% endif %}
+      <div class="rodape__adiciona" id="add-scroll">
+        <a
+          href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
+          class="rodape__adiciona--link"
+          title="Adicionar novo livro"
+        >
+          <img
+            src="{% static '/assets/img/icone-mais.png'%}"
+            alt="ícone de mais"
+            class="rodape__adiciona--imagem"
+          />
+        </a>
+      </div>
   </main>
 
   {% include 'partials/_footer.html' %}
