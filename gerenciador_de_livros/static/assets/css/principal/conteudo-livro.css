@@ -3,9 +3,9 @@
 
   background-color: var(--azul-celeste-escuro);
 
-  display: flex;
-
   height: 18.75rem;
+
+  padding-top: 3.4rem;
 
   margin-left: 2.4375rem;
   margin-top: 1.5625rem;
@@ -22,5 +22,4 @@
     rgba(63, 110, 180, 1) 91%
   );
 
-  padding: 0.5rem;
 }
