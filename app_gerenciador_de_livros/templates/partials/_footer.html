@@ -1,57 +1,66 @@
 {% load static %}
-    <footer class="rodape">
-      <div class="principal__link" id="link-scroll">
-        <a
-          class="principal__link-topo"
-          href="{% url 'index' %}"
-          title="Voltar ao topo"
-          >&#9651;</a
-        >
-      </div>
-      <div class="rodape__desenvolvedores">
-        <h3 class="rodape__desenvolvedores-titulo">Desenvolvedores:</h3>
-        <div class="rodape__desenvolvedores-identificacao">
-          <a
-            href="https://www.linkedin.com/in/victor-gabriel-marques-4a327a208/"
-            class="rodape__desenvolvedores-identificacao--link"
-            target="__blank"
-          >
-            <img
-              src="{% static '/assets/img/imagem-victor.png' %}"
-              alt="Imagem de Perfil de Victor Gabriel Marques"
-              class="rodape__desenvolvedores-identificacao--imagem"
-            />
-            <p class="rodape__desenvolvedores-identificacao--Victor">
-              Victor G. Marques
-            </p>
-          </a>
-        </div>
-        <div class="rodape__desenvolvedores-identificacao">
-          <a
-            href="https://www.linkedin.com/in/raphaela-guiland-ferraz-32a980214/"
-            target="__blank"
-            class="rodape__desenvolvedores-identificacao--link"
-          >
-            <img
-              src="{% static '/assets/img/imagem-rapha.png' %}"
-              alt="Imagem de Perfil de Raphaela Guiland Ferraz"
-              class="rodape__desenvolvedores-identificacao--imagem"
-            />
-            <p class="rodape__desenvolvedores-identificacao--Rapha">
-              Raphaela G. Ferraz
-            </p>
-          </a>
-        </div>
-      </div>
-      <div class="rodape__github">
-        <a
-          href="https://github.com/VictorGM01/book_manager"
-          target="__blank"
-          class="rodape__github-link"
-          ><img
-            src="{% static '/assets/img/icone-github.png' %}"
-            alt="ícone do github"
-            class="rodape__github-imagem"
-        /></a>
-      </div>
-    </footer>
+<footer class="rodape">
+  <div class="rodape__adicionar" id="add-scroll">
+    <a href="#" class="rodape__adicionar--link" title="Adicionar novo livro">
+      <img
+        src="/gerenciador_de_livros/static/assets/img/svg-mais.svg"
+        alt="ícone de mais"
+        class="rodape__adicionar--imagem"
+      />
+    </a>
+  </div>
+  <div class="principal__link" id="link-scroll">
+    <a
+      class="principal__link-topo"
+      href="{% url 'index' %}"
+      title="Voltar ao topo"
+      >&#9651;</a
+    >
+  </div>
+  <div class="rodape__desenvolvedores">
+    <h3 class="rodape__desenvolvedores-titulo">Desenvolvedores:</h3>
+    <div class="rodape__desenvolvedores-identificacao">
+      <a
+        href="https://www.linkedin.com/in/victor-gabriel-marques-4a327a208/"
+        class="rodape__desenvolvedores-identificacao--link"
+        target="__blank"
+      >
+        <img
+          src="{% static '/assets/img/imagem-victor.png' %}"
+          alt="Imagem de Perfil de Victor Gabriel Marques"
+          class="rodape__desenvolvedores-identificacao--imagem"
+        />
+        <p class="rodape__desenvolvedores-identificacao--Victor">
+          Victor G. Marques
+        </p>
+      </a>
+    </div>
+    <div class="rodape__desenvolvedores-identificacao">
+      <a
+        href="https://www.linkedin.com/in/raphaela-guiland-ferraz-32a980214/"
+        target="__blank"
+        class="rodape__desenvolvedores-identificacao--link"
+      >
+        <img
+          src="{% static '/assets/img/imagem-rapha.png' %}"
+          alt="Imagem de Perfil de Raphaela Guiland Ferraz"
+          class="rodape__desenvolvedores-identificacao--imagem"
+        />
+        <p class="rodape__desenvolvedores-identificacao--Rapha">
+          Raphaela G. Ferraz
+        </p>
+      </a>
+    </div>
+  </div>
+  <div class="rodape__github">
+    <a
+      href="https://github.com/VictorGM01/book_manager"
+      target="__blank"
+      class="rodape__github-link"
+      ><img
+        src="{% static '/assets/img/icone-github.png' %}"
+        alt="ícone do github"
+        class="rodape__github-imagem"
+    /></a>
+  </div>
+</footer>
