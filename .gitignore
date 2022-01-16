@@ -10,6 +10,8 @@ key/
 static/admin
 /static/
 
+# Pasta de imagens
+media/
 # C extensions
 *.so
 
