@@ -1,52 +1,67 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block body %}
-  <body>
+{% extends 'base.html' %} {% load static %} {% block body %}
+<body>
+  {% include 'partials/_header.html' %}
 
-    {% include 'partials/_header.html' %}
+  <main class="principal">
+    <section class="bloco-titulo">
+      <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
+      <div class="titulo__sublinhado"></div>
+    </section>
 
-    <main class="principal">
-      <section class="bloco-titulo">
-        <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
-        <div class="titulo__sublinhado"></div>
-      </section>
-
-      <section class="bloco-livros">
-        {% if livros %}
-            {% for livro in livros %}
-        <section class="conteudo-livro">
-          <div class="conteudo-livro__caixa">
-            <img
-              src="{% static '/assets/img/ilustracao-livros.png' %}"
-              alt="Imagem de capa do Livro"
-              class="conteudo-livro__caixa-imagem"
-              width="220"
-            />
-            <div class="conteudo-livro__caixa-linha"></div>
-            <div class="conteudo-livro__caixa-titulo">
-              {{livro.nome_do_livro}}
-            </div>
+    <section class="bloco-livros">
+      {% if livros %} {% for livro in livros %}
+      <section class="conteudo-livro">
+        <div class="conteudo-livro__caixa">
+          <img
+            src="{% static '/assets/img/ilustracao-livros.png' %}"
+            alt="Imagem de capa do Livro"
+            class="conteudo-livro__caixa-imagem"
+            width="220"
+          />
+          <div class="conteudo-livro__caixa-linha"></div>
+          <div class="conteudo-livro__caixa-titulo">
+            {{livro.nome_do_livro}}
           </div>
-        </section>
-            {% endfor %}
-        <div class="rodape__adiciona" id="add-scroll">
-          <a href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}" class="rodape__adiciona--link" title="Adicionar novo livro">
-            <img
-              src="{% static '/assets/img/icone-mais.png'%}"
-              alt="ícone de mais"
-              class="rodape__adiciona--imagem"
-            />
-          </a>
         </div>
       </section>
-        {% else %}
-            <p>Livro não encontrado :(</p>
-        {% endif %}
-    </main>
+      {% endfor %}
+      <div class="rodape__adiciona" id="add-scroll">
+        <a
+          href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
+          class="rodape__adiciona--link"
+          title="Adicionar novo livro"
+        >
+          <img
+            src="{% static '/assets/img/icone-mais.png'%}"
+            alt="ícone de mais"
+            class="rodape__adiciona--imagem"
+          />
+        </a>
+      </div>
+    </section>
+    {% else %}
+    <section class="bloco-titulo">
+      <h1 class="titulo--pesquisa-importante">
+        Ops... Livro não encontrado :(
+      </h1>
+      <div class="titulo--pesquisa-importante__sublinhado"></div>
+      <div class="bloco-titulo__imagem-negativo">
+        <img
+          src="/gerenciador_de_livros/static/assets/img/icone-livro-importante.png"
+          alt="ícone de alerta para pesquisa não encontrada"
+          class="pesquisa-importante__imagem"
+        />
+      </div>
+      <h5 class="subtitulo--pesquisa-importante">
+        Tente usar outras palavras em sua busca
+      </h5>
+    </section>
+    {% endif %}
+  </main>
 
-    {% include 'partials/_footer.html' %}
-  </body>
-  <script src="{% static '/assets/js/script.js'%}">
-    defer
-  </script>
+  {% include 'partials/_footer.html' %}
+</body>
+<script src="{% static '/assets/js/script.js'%}">
+  defer
+</script>
 {% endblock %}
