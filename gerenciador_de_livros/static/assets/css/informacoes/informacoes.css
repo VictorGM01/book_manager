@@ -1,0 +1,13 @@
+.informacoes {
+  align-items: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin-left: 3.125rem;
+
+  margin-right: 3.125rem;
+}
