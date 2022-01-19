@@ -1,0 +1,7 @@
+.informacoes__detalhes__lista {
+  border-left: 4px solid var(--azul-celeste-escuro);
+
+  box-sizing: border-box;
+
+  padding: 2rem 3rem 0 1rem;
+}

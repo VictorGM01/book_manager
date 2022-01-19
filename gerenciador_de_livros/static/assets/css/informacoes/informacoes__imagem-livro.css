@@ -1,0 +1,13 @@
+.informacoes__imagem-livro {
+  align-items: center;
+
+  display: flex;
+
+  height: 380px;
+
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  width: 300px;
+}
