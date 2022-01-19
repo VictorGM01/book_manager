@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Livros
 
 
@@ -27,3 +27,11 @@ def buscar(request):
 
     return render(request, 'buscar.html', dados)
 
+
+def livro(request, id_livro):
+
+    livro_a_exibir = {
+        'livro': get_object_or_404(Livros, pk=id_livro)
+    }
+
+    return render(request, 'livro.html', livro_a_exibir)
