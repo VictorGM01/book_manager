@@ -86,11 +86,17 @@
           </ul>
 
           <div class="informacoes__imagem">
+            {% if livro.foto_do_livro == '' %}
             <div class="informacoes__imagem-livro">
-              <img src="" alt="" width="400" height="400" />
+              <img src="{% static 'assets/img/capa_padrao.jpg' %}" alt="" width="400" height="400" />
             </div>
+            {% else %}
+            <div class="informacoes__imagem-livro">
+              <img src="{{ livro.foto_do_livro.url }}" alt="{{ livro.nome_do_livro }}" width="400" height="400" />
+            </div>
+            {% endif %}
             <img
-              src="/gerenciador_de_livros/static/assets/img/icone-estrela.png"
+              src="{% static '/assets/img/icone-estrela.png'%}"
               alt="Ícone de estrela para avaliar o livro"
             />
           </div>
