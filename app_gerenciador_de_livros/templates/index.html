@@ -1,99 +1,101 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block link %}
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--titulo.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--link.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css'%}"
-    />
-{% endblock %}
-{% block body %}
-  <body>
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--titulo.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--link.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css'%}"
+/>
+{% endblock %} {% block body %}
+<body>
+  {% include 'partials/_header.html' %}
 
-    {% include 'partials/_header.html' %}
+  <main class="principal">
+    <section class="bloco-titulo">
+      <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
+      <div class="titulo__sublinhado"></div>
+    </section>
 
-    <main class="principal">
-      <section class="bloco-titulo">
-        <h1 class="titulo">Mantenha os seus livros catalogados aqui!</h1>
-        <div class="titulo__sublinhado"></div>
-      </section>
-
-      <section class="bloco-livros">
-        {% if livros %}
-            {% for livro in livros %}
-        <section class="conteudo-livro">
-          <div class="conteudo-livro__caixa">
-            {% if livro.foto_do_livro == '' %}
-                <img
-                src="{% static '/assets/img/ilustracao-livros.png' %}"
-                alt="Imagem de capa do Livro"
-                class="conteudo-livro__caixa-imagem"
-                width="220"
-                />
-            {% else %}
-                <img
-                src="{{ livro.foto_do_livro.url }}"
-                alt="Imagem de capa do Livro: {{ livro.nome_do_livro }}"
-                class="conteudo-livro__caixa-imagem"
-                width="150"
-                height="180"
-                />
-            {% endif %}
-            <div class="conteudo-livro__caixa-linha"></div>
-            <div class="conteudo-livro__caixa-titulo">
-              <a href="{% url 'livro' livro.id %}">
-              {{livro.nome_do_livro}}
-              </a>
-            </div>
-          </div>
-        </section>
-            {% endfor %}
-        <div class="rodape__adiciona" id="add-scroll">
-          <a href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}" class="rodape__adiciona--link" title="Adicionar novo livro">
-            <img
-              src="{% static '/assets/img/icone-mais.png'%}"
-              alt="ícone de mais"
-              class="rodape__adiciona--imagem"
-            />
-          </a>
-        </div>
-      </section>
-        {% else %}
-      <section class="principal__primeiro-acesso">
-        <div class="principal__primeiro-acesso--imagem">
+    <section class="bloco-livros">
+      {% if livros %} {% for livro in livros %}
+      <section class="conteudo-livro">
+        <div class="conteudo-livro__caixa">
+          {% if livro.foto_do_livro == '' %}
           <img
-            class="primeiro-acesso__imagem"
-            src="{%  static '/assets/img/icone-livro-adicionar.png' %}"
-            alt="Ícone de adicionar o primeiro livro"
+            src="{% static '/assets/img/ilustracao-livros.png' %}"
+            alt="Imagem de capa do Livro"
+            class="conteudo-livro__caixa-imagem"
+            width="220"
           />
+          {% else %}
+          <img
+            src="{{ livro.foto_do_livro.url }}"
+            alt="Imagem de capa do Livro: {{ livro.nome_do_livro }}"
+            class="conteudo-livro__caixa-imagem"
+            width="150"
+            height="180"
+          />
+          {% endif %}
+          <div class="conteudo-livro__caixa-linha"></div>
+          <div class="conteudo-livro__caixa-titulo">
+            <a
+              href="{% url 'livro' livro.id %}"
+              class="conteudo-livro__caixa-link"
+            >
+              {{livro.nome_do_livro}}
+            </a>
+          </div>
         </div>
-        <h5 class="principal__primeiro-acesso--titulo">
-          Você ainda não catalogou nenhum livro!<br />
-        </h5>
-        <a
-          class="principal__primeiro-acesso--link"
-          href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
-          title="Adicione seu primeiro livro"
-          >Adicione seu primeiro livro</a
-        >
       </section>
-        {% endif %}
-    </main>
+      {% endfor %}
+      <div class="rodape__adiciona" id="add-scroll">
+        <a
+          href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
+          class="rodape__adiciona--link"
+          title="Adicionar novo livro"
+        >
+          <img
+            src="{% static '/assets/img/icone-mais.png'%}"
+            alt="ícone de mais"
+            class="rodape__adiciona--imagem"
+          />
+        </a>
+      </div>
+    </section>
+    {% else %}
+    <section class="principal__primeiro-acesso">
+      <div class="principal__primeiro-acesso--imagem">
+        <img
+          class="primeiro-acesso__imagem"
+          src="{%  static '/assets/img/icone-livro-adicionar.png' %}"
+          alt="Ícone de adicionar o primeiro livro"
+        />
+      </div>
+      <h5 class="principal__primeiro-acesso--titulo">
+        Você ainda não catalogou nenhum livro!<br />
+      </h5>
+      <a
+        class="principal__primeiro-acesso--link"
+        href="{% url 'admin:app_gerenciador_de_livros_livros_add' %}"
+        title="Adicione seu primeiro livro"
+        >Adicione seu primeiro livro</a
+      >
+    </section>
+    {% endif %}
+  </main>
 
-    {% include 'partials/_footer.html' %}
-  </body>
-  <script src="{% static '/assets/js/script.js'%}">
-    defer
-  </script>
+  {% include 'partials/_footer.html' %}
+</body>
+<script src="{% static '/assets/js/script.js'%}">
+  defer
+</script>
 {% endblock %}
