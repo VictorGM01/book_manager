@@ -74,11 +74,15 @@
           <li class="detalhes__lista__item">
             Gênero: <span class="lista__item">{{ livro.generos }}</span>
           </li>
+          {% if livro.situacao_id == 2 or livro.situacao_id == 3%}
           <li class="detalhes__lista__item">
             <a type="button" href="#" class="informacoes__link--editar-livro">
               Marcar como lido
             </a>
           </li>
+          {% else %}
+          {% endif %}
+
         </ul>
 
         <div class="informacoes__imagem">
