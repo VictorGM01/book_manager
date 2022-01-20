@@ -129,7 +129,9 @@
             {% endif %}
             <div class="conteudo-livro__caixa-linha"></div>
             <div class="conteudo-livro__caixa-titulo">
+              <a href="{% url 'livro' sugestao.id %}">
               {{ sugestao.nome_do_livro }}
+              </a>
             </div>
           </div>
         </section>
