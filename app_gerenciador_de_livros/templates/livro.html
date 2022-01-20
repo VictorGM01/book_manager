@@ -102,10 +102,72 @@
           </div>
           {% endif %}
           <div class="informacoes__imagem-estrela">
+            {% if livro.estrelas == 1 %}
             <img
               src="{% static '/assets/img/icone-estrela.png'%}"
               alt="Ícone de estrela para avaliar o livro"
             />
+            {% elif livro.estrelas == 2 %}
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            {% elif livro.estrelas == 3 %}
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            {% elif livro.estrelas == 4 %}
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            {% elif livro.estrelas == 5 %}
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            <img
+              src="{% static '/assets/img/icone-estrela.png'%}"
+              alt="Ícone de estrela para avaliar o livro"
+            />
+            {% endif %}
           </div>
         </div>
       </div>
