@@ -50,7 +50,9 @@
             {% endif %}
           <div class="conteudo-livro__caixa-linha"></div>
           <div class="conteudo-livro__caixa-titulo">
+            <a href="{% url 'livro' livro.id %}">
             {{livro.nome_do_livro}}
+            </a>
           </div>
         </div>
       </section>
