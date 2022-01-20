@@ -76,7 +76,7 @@
           </li>
           {% if livro.situacao_id == 2 or livro.situacao_id == 3%}
           <li class="detalhes__lista__item">
-            <a type="button" href="#" class="informacoes__link--editar-livro">
+            <a type="button" href="{% url 'marcar_como_lido' livro.id %}" class="informacoes__link--editar-livro">
               Marcar como lido
             </a>
           </li>

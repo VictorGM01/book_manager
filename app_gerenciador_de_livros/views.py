@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Livros
 
 
@@ -42,5 +42,8 @@ def livro(request, id_livro):
     return render(request, 'livro.html', dados)
 
 
-def marcar_como_lido():
-    pass
+def marcar_como_lido(request, id_livro):
+    livro_a_mudar = get_object_or_404(Livros, pk=id_livro)
+    livro_a_mudar.situacao_id = 1
+    livro_a_mudar.save()
+    return redirect(f'/{id_livro}')
