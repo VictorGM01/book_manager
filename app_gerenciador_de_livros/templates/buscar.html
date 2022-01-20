@@ -28,35 +28,7 @@
 
     <section class="bloco-livros">
       {% for livro in livros %}
-      <section class="conteudo-livro">
-        <div class="conteudo-livro__caixa">
-          {% if livro.foto_do_livro == '' %}
-          <img
-            src="{% static '/assets/img/ilustracao-livros.png' %}"
-            alt="Imagem de capa do Livro"
-            class="conteudo-livro__caixa-imagem"
-            width="220"
-          />
-          {% else %}
-          <img
-            src="{{ livro.foto_do_livro.url }}"
-            alt="Imagem de capa do Livro: {{ livro.nome_do_livro }}"
-            class="conteudo-livro__caixa-imagem"
-            width="150"
-            height="180"
-          />
-          {% endif %}
-          <div class="conteudo-livro__caixa-linha"></div>
-          <div class="conteudo-livro__caixa-titulo">
-            <a
-              href="{% url 'livro' livro.id %}"
-              class="conteudo-livro__caixa-link"
-            >
-              {{livro.nome_do_livro}}
-            </a>
-          </div>
-        </div>
-      </section>
+          {% include 'partials/_bloco_livro.html' %}
       {% endfor %}
     </section>
     {% else %}
