@@ -61,22 +61,22 @@
             Editar livro
           </a>
         </div>
-        <h2 class="informacoes__titulo">Nome do Livro</h2>
+        <h2 class="informacoes__titulo">{{ livro.nome_do_livro }}</h2>
         <div class="informacoes__linha"></div>
         <div class="informacoes__detalhes">
           <ul class="informacoes__detalhes__lista">
             <li class="detalhes__lista__item">
+              Autor: <span class="lista__item">{{ livro.autor }}</span>
+            </li>
+            <li class="detalhes__lista__item">
               Editora:
-              <span class="lista__item">Pé da Letra</span>
+              <span class="lista__item">{{ livro.editora_do_livro }}</span>
             </li>
             <li class="detalhes__lista__item">
-              Autor: <span class="lista__item">Nicolau</span>
+              Situação: <span class="lista__item">{{ livro.situacao }}</span>
             </li>
             <li class="detalhes__lista__item">
-              Situação: <span class="lista__item">Lendo</span>
-            </li>
-            <li class="detalhes__lista__item">
-              Gênero: <span class="lista__item">Lendo</span>
+              Gênero: <span class="lista__item">{{ livro.generos }}</span>
             </li>
             <li class="detalhes__lista__item">
               <a type="button" href="#" class="informacoes__link--editar-livro">
