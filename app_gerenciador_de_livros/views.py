@@ -30,8 +30,13 @@ def buscar(request):
 
 def livro(request, id_livro):
 
-    livro_a_exibir = {
-        'livro': get_object_or_404(Livros, pk=id_livro)
+    livro_a_exibir = get_object_or_404(Livros, pk=id_livro)
+
+    sugestoes = Livros.objects.filter(generos__icontains=livro_a_exibir.generos).exclude(id=id_livro)[:3]
+
+    dados = {
+        'livro': livro_a_exibir,
+        'sugestoes': sugestoes
     }
 
-    return render(request, 'livro.html', livro_a_exibir)
+    return render(request, 'livro.html', dados)
