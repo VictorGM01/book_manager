@@ -40,3 +40,7 @@ def livro(request, id_livro):
     }
 
     return render(request, 'livro.html', dados)
+
+
+def marcar_como_lido():
+    pass

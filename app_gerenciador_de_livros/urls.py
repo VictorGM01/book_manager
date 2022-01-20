@@ -6,5 +6,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('buscar', views.buscar, name='buscar'),
-    path('<int:id_livro>', views.livro, name='livro')
+    path('<int:id_livro>', views.livro, name='livro'),
+    path('marcar-como-lido/<int:id_livro>', views.marcar_como_lido, name='marcar_como_lido')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
