@@ -1,148 +1,156 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block link %}
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/detalhes__lista__item.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__detalhes.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__detalhes__lista.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__imagem-livro.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__imagem.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__link--editar-livro.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__link.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/informacoes/informacoes__titulo.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/opcoes/opcoes.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/opcoes/opcoes__linha.css'%}"
-    />
-    <link
-      rel="stylesheet"
-      href="{% static '/assets/css/opcoes/opcoes__titulo.css'%}"
-    />
-{% endblock %}
-{% block body %}
-  <body>
-    {% include 'partials/_header.html' %}
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/detalhes__lista__item.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__detalhes.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__detalhes__lista.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__imagem-livro.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__imagem.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__link--editar-livro.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__link.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/informacoes/informacoes__titulo.css'%}"
+/>
+<link rel="stylesheet" href="{% static '/assets/css/opcoes/opcoes.css'%}" />
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/opcoes/opcoes__linha.css'%}"
+/>
+<link
+  rel="stylesheet"
+  href="{% static '/assets/css/opcoes/opcoes__titulo.css'%}"
+/>
+{% endblock %} {% block body %}
+<body>
+  {% include 'partials/_header.html' %}
 
-    <main class="principal">
-      <section class="informacoes">
-        <div class="informacoes__link">
-          <a type="button" href="#" class="informacoes__link--editar-livro">
-            Editar livro
-          </a>
-        </div>
-        <h2 class="informacoes__titulo">{{ livro.nome_do_livro }}</h2>
-        <div class="informacoes__linha"></div>
-        <div class="informacoes__detalhes">
-          <ul class="informacoes__detalhes__lista">
-            <li class="detalhes__lista__item">
-              Autor: <span class="lista__item">{{ livro.autor }}</span>
-            </li>
-            <li class="detalhes__lista__item">
-              Editora:
-              <span class="lista__item">{{ livro.editora_do_livro }}</span>
-            </li>
-            <li class="detalhes__lista__item">
-              Situação: <span class="lista__item">{{ livro.situacao }}</span>
-            </li>
-            <li class="detalhes__lista__item">
-              Gênero: <span class="lista__item">{{ livro.generos }}</span>
-            </li>
-            <li class="detalhes__lista__item">
-              <a type="button" href="#" class="informacoes__link--editar-livro">
-                Marcar como lido
-              </a>
-            </li>
-          </ul>
+  <main class="principal">
+    <section class="informacoes">
+      <div class="informacoes__link">
+        <a type="button" href="#" class="informacoes__link--editar-livro">
+          Editar livro
+        </a>
+      </div>
+      <h2 class="informacoes__titulo">{{ livro.nome_do_livro }}</h2>
+      <div class="informacoes__linha"></div>
+      <div class="informacoes__detalhes">
+        <ul class="informacoes__detalhes__lista">
+          <li class="detalhes__lista__item">
+            Autor: <span class="lista__item">{{ livro.autor }}</span>
+          </li>
+          <li class="detalhes__lista__item">
+            Editora:
+            <span class="lista__item">{{ livro.editora_do_livro }}</span>
+          </li>
+          <li class="detalhes__lista__item">
+            Situação: <span class="lista__item">{{ livro.situacao }}</span>
+          </li>
+          <li class="detalhes__lista__item">
+            Gênero: <span class="lista__item">{{ livro.generos }}</span>
+          </li>
+          <li class="detalhes__lista__item">
+            <a type="button" href="#" class="informacoes__link--editar-livro">
+              Marcar como lido
+            </a>
+          </li>
+        </ul>
 
-          <div class="informacoes__imagem">
-            {% if livro.foto_do_livro == '' %}
-            <div class="informacoes__imagem-livro">
-              <img src="{% static 'assets/img/capa_padrao.jpg' %}" alt="" width="400" height="400" />
-            </div>
-            {% else %}
-            <div class="informacoes__imagem-livro">
-              <img src="{{ livro.foto_do_livro.url }}" alt="{{ livro.nome_do_livro }}" width="400" height="400" />
-            </div>
-            {% endif %}
+        <div class="informacoes__imagem">
+          {% if livro.foto_do_livro == '' %}
+          <div class="informacoes__imagem-livro">
+            <img
+              src="{% static 'assets/img/capa_padrao.jpg' %}"
+              alt=""
+              width="400"
+              height="400"
+            />
+          </div>
+          {% else %}
+          <div class="informacoes__imagem-livro">
+            <img
+              src="{{ livro.foto_do_livro.url }}"
+              alt="{{ livro.nome_do_livro }}"
+              width="400"
+              height="400"
+            />
+          </div>
+          {% endif %}
+          <div class="informacoes__imagem-estrela">
             <img
               src="{% static '/assets/img/icone-estrela.png'%}"
               alt="Ícone de estrela para avaliar o livro"
             />
           </div>
         </div>
+      </div>
 
-        <section class="opcoes">
-          <div class="opcoes__linha"></div>
-          <h4 class="opcoes__titulo">Você pode gostar de:</h4>
-        </section>
+      <section class="opcoes">
+        <div class="opcoes__linha"></div>
+        <h4 class="opcoes__titulo">Você pode gostar de:</h4>
       </section>
-      <section class="bloco-livros">
-        {% for sugestao in sugestoes %}
-        <section class="conteudo-livro">
-          <div class="conteudo-livro__caixa">
-            {% if sugestao.foto_do_livro == '' %}
-            <img
-              src="{% static '/assets/img/ilustracao-livros.png'%}"
-              alt="Imagem de capa do Livro"
-              class="conteudo-livro__caixa-imagem"
-              width="220"
-            />
-            {% else %}
-            <img
-              src="{{ sugestao.foto_do_livro.url }}"
-              alt="Imagem de capa do Livro: {{ sugestao.nome_do_livro }}"
-              class="conteudo-livro__caixa-imagem"
-              width="150"
-              height="180"
-            />
-            {% endif %}
-            <div class="conteudo-livro__caixa-linha"></div>
-            <div class="conteudo-livro__caixa-titulo">
-              <a href="{% url 'livro' sugestao.id %}">
+    </section>
+    <section class="bloco-livros">
+      {% for sugestao in sugestoes %}
+      <section class="conteudo-livro">
+        <div class="conteudo-livro__caixa">
+          {% if sugestao.foto_do_livro == '' %}
+          <img
+            src="{% static '/assets/img/ilustracao-livros.png'%}"
+            alt="Imagem de capa do Livro"
+            class="conteudo-livro__caixa-imagem"
+            width="220"
+          />
+          {% else %}
+          <img
+            src="{{ sugestao.foto_do_livro.url }}"
+            alt="Imagem de capa do Livro: {{ sugestao.nome_do_livro }}"
+            class="conteudo-livro__caixa-imagem"
+            width="150"
+            height="180"
+          />
+          {% endif %}
+          <div class="conteudo-livro__caixa-linha"></div>
+          <div class="conteudo-livro__caixa-titulo">
+            <a
+              href="{% url 'livro' sugestao.id %}"
+              class="conteudo-livro__caixa-link"
+            >
               {{ sugestao.nome_do_livro }}
-              </a>
-            </div>
+            </a>
           </div>
-        </section>
-        {% endfor %}
+        </div>
       </section>
-    </main>
+      {% endfor %}
+    </section>
+  </main>
 
-    {% include 'partials/_footer.html' %}
-
-  </body>
-  <script src="{% static '/assets/js/script.js'%}">
-    defer
-  </script>
+  {% include 'partials/_footer.html' %}
+</body>
+<script src="{% static '/assets/js/script.js'%}">
+  defer
+</script>
 {% endblock %}

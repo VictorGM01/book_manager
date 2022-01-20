@@ -1,0 +1,12 @@
+.conteudo-livro__caixa-link {
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+
+  text-decoration: none;
+}
+
+.conteudo-livro__caixa-link:hover {
+  color: var(--azul-bem-claro);
+  font-weight: bold;
+}
