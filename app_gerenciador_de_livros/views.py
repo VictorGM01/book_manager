@@ -47,3 +47,7 @@ def marcar_como_lido(request, id_livro):
     livro_a_mudar.situacao_id = 1
     livro_a_mudar.save()
     return redirect(f'/{id_livro}')
+
+
+def adiciona_livro(request):
+    pass
