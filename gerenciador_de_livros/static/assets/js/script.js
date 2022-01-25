@@ -10,3 +10,10 @@ function scroll() {
     linkScroll.style.display = 'none';
   }
 }
+
+const button = document.querySelector('[data-link-scroll]');
+console.log(button);
+
+button.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});
