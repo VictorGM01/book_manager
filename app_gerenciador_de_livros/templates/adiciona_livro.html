@@ -68,6 +68,7 @@
 />
 {% endblock %} {% block body %}
 <body>
+  {% include 'partials/_header.html' %}
   <main class="principal">
     <section class="bloco-titulo">
       <h1 class="titulo">Adicione seu livro:</h1>
@@ -184,5 +185,6 @@
       </form>
     </section>
   </main>
+  {% include 'partials/_footer.html' %}
 </body>
 {% endblock %}
