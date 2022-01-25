@@ -3,6 +3,7 @@ from .models import Livros
 
 
 def index(request):
+    """Página Principal da Aplicação"""
     livros = Livros.objects.order_by('nome_do_livro').all()
 
     dados = {
@@ -13,6 +14,7 @@ def index(request):
 
 
 def buscar(request):
+    """Página de busca"""
     lista_livros = Livros.objects.all()
 
     if "buscar" in request.GET:
@@ -29,7 +31,7 @@ def buscar(request):
 
 
 def livro(request, id_livro):
-
+    """Página que contém as informações do livro"""
     livro_a_exibir = get_object_or_404(Livros, pk=id_livro)
 
     sugestoes = Livros.objects.filter(generos__icontains=livro_a_exibir.generos).exclude(id=id_livro)[:3]
@@ -43,6 +45,7 @@ def livro(request, id_livro):
 
 
 def marcar_como_lido(request, id_livro):
+    """Responsável por mudar a situação do livro para 'lido'"""
     livro_a_mudar = get_object_or_404(Livros, pk=id_livro)
     livro_a_mudar.situacao_id = 1
     livro_a_mudar.save()
@@ -50,6 +53,7 @@ def marcar_como_lido(request, id_livro):
 
 
 def adiciona_livro(request):
+    """Adiciona novo livro ao banco de dados"""
     global situacao_id
     if request.method == 'POST':
         nome = request.POST['nome_livro']
@@ -87,6 +91,7 @@ def adiciona_livro(request):
 
 
 def edita_livro(request, id_livro):
+    """Edita informações de um livro já cadastrado"""
     livro_selecionado = get_object_or_404(Livros, pk=id_livro)
     livro_a_editar = {
         'livro': livro_selecionado
