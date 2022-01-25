@@ -1,0 +1,24 @@
+.input__informacao-livro {
+  color: var(--esbranquicado);
+
+  background-color: var(--azul-celeste-escuro);
+
+  border: none;
+  border-radius: 8px;
+
+  height: 3.0625rem;
+
+  margin-bottom: 2.3125rem;
+
+  padding-left: 0.8125rem;
+
+  width: 47.75rem;
+}
+
+.input__informacao-livro:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.input__informacao-livro:active {
+  background: var(--azul-bem-claro);
+}
