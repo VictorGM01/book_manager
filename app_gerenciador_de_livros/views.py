@@ -73,11 +73,18 @@ def adiciona_livro(request):
         elif situacao == 'Lendo':
             situacao_id = 3
 
-        novo_livro = Livros.objects.create(nome_do_livro=nome, editora_do_livro=editora, autor=autor, generos=genero,
-                                           situacao_id=situacao_id, estrelas=estrelas, opiniao=opiniao,
-                                           foto_do_livro=foto)
+        if estrelas:
+            novo_livro = Livros.objects.create(nome_do_livro=nome, editora_do_livro=editora, autor=autor, generos=genero,
+                                               situacao_id=situacao_id, estrelas=estrelas, opiniao=opiniao,
+                                               foto_do_livro=foto)
+            novo_livro.save()
 
-        novo_livro.save()
+        else:
+            novo_livro = Livros.objects.create(nome_do_livro=nome, editora_do_livro=editora, autor=autor,
+                                               generos=genero,
+                                               situacao_id=situacao_id, opiniao=opiniao,
+                                               foto_do_livro=foto)
+            novo_livro.save()
 
         return redirect('index')
 
