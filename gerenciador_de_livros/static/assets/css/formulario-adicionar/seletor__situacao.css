@@ -1,0 +1,15 @@
+.seletor__situacao {
+  background-color: var(--azul-celeste-escuro);
+
+  color: var(--esbranquicado);
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-family: 'Roboto Mono', monospace;
+
+  height: 3.0625rem;
+
+  padding-left: 0.8125rem;
+}
