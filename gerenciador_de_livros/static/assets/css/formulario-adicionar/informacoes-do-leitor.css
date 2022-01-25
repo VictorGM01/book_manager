@@ -1,0 +1,15 @@
+.informacoes-do-leitor {
+  align-items: center;
+
+  border: none;
+
+  display: flex;
+
+  gap: 2.02083rem;
+
+  margin-bottom: 2rem;
+
+  padding: 0;
+
+  justify-content: center;
+}
