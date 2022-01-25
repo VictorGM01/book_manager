@@ -84,3 +84,7 @@ def adiciona_livro(request):
         return redirect('index')
 
     return render(request, 'adiciona_livro.html')
+
+
+def edita_livro(request, id_livro):
+    pass
