@@ -62,3 +62,5 @@ def adiciona_livro(request):
 
         if not nome.strip() or not editora.strip() or not autor.strip() or not genero.strip() or not situacao.strip():
             return redirect('add_livro')
+
+    return render(request, 'adiciona_livro.html')
