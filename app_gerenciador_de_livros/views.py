@@ -50,6 +50,7 @@ def marcar_como_lido(request, id_livro):
 
 
 def adiciona_livro(request):
+    global situacao_id
     if request.method == 'POST':
         nome = request.POST['nome_livro']
         editora = request.POST['editora_livro']
@@ -71,5 +72,13 @@ def adiciona_livro(request):
 
         elif situacao == 'Lendo':
             situacao_id = 3
+
+        novo_livro = Livros.objects.create(nome_do_livro=nome, editora_do_livro=editora, autor=autor, generos=genero,
+                                           situacao_id=situacao_id, estrelas=estrelas, opiniao=opiniao,
+                                           foto_do_livro=foto)
+
+        novo_livro.save()
+
+        return redirect('index')
 
     return render(request, 'adiciona_livro.html')
