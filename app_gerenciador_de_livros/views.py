@@ -50,4 +50,12 @@ def marcar_como_lido(request, id_livro):
 
 
 def adiciona_livro(request):
-    pass
+    if request.method == 'POST':
+        nome_do_livro = request.POST['nome_livro']
+        editora = request.POST['editora_livro']
+        autor = request.POST['autor_livro']
+        genero = request.POST['genero_livro']
+        situacao = request.POST['situacao']
+        estrelas = request.POST['estrelas']
+        opiniao = request.POST['opiniao']
+        foto = request.FILES['foto_livro']
