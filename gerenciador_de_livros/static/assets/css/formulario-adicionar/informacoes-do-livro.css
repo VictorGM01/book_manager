@@ -1,0 +1,11 @@
+.informacoes-do-livro {
+  align-items: flex-start;
+
+  border: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 0;
+}
