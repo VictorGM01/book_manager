@@ -52,7 +52,7 @@
 />
 <link
   rel="stylesheet"
-  href="{% static '/assets/css/formulario/formulario__adicionar.css'%}"
+  href="{% static '/assets/css/formulario/formulario.css'%}"
 />
 <link
   rel="stylesheet"
@@ -75,7 +75,7 @@
       <div class="titulo__sublinhado"></div>
     </section>
 
-    <section class="formulario__adicionar">
+    <section class="formulario">
       <form action="{% url 'add_livro' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
         <fieldset class="informacoes-do-livro">
           <label for="nome_livro" class="label__informacao-livro"
