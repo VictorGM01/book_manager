@@ -75,7 +75,7 @@
     </section>
 
     <section class="formulario__adicionar">
-      <form action="{% url 'add_livro' %}" method="post">
+      <form action="{% url 'add_livro' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
         <fieldset class="informacoes-do-livro">
           <label for="nome_livro" class="label__informacao-livro"
             >Nome do Livro:
@@ -165,6 +165,7 @@
               name="foto_livro"
               id="foto_livro"
               class="input__informacao-livro--foto"
+              required
             />
           </div>
         </fieldset>
