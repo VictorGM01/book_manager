@@ -1,12 +1,124 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block link %}
+{% extends 'base.html' %} {% load static %} {% block link %}
 
-    <!-- Links específicos da página ficam aqui --->
+<!-- Links específicos da página ficam aqui --->
 
-{% endblock %}
-{% block body %}
+{% endblock %} {% block body %}
+<body>
+  <main class="principal">
+    <section class="bloco-titulo">
+      <h1 class="titulo">Adicione seu livro:</h1>
+      <div class="titulo__sublinhado"></div>
+    </section>
 
-    <!-- Conteúdo da tag body, sem o footer e header, seguindo o padrão das demais páginas -->
+    <section class="formulario__adicionar">
+      <form action="">
+        <fieldset class="informacoes-do-livro">
+          <label for="nome_livro" class="label__informacao-livro"
+            >Nome do Livro:
+          </label>
+          <input
+            type="text"
+            name="nome_livro"
+            id="nome_livro"
+            class="input__informacao-livro"
+            placeholder="Ex.: Python Fluente"
+            required
+          />
 
+          <label for="editora_livro" class="label__informacao-livro"
+            >Editora:
+          </label>
+          <input
+            type="text"
+            name="editora_livro"
+            class="input__informacao-livro"
+            placeholder="Ex.: Novatec"
+            required
+          />
+
+          <label for="autor_livro" class="label__informacao-livro"
+            >Autor:
+          </label>
+          <input
+            type="text"
+            name="autor_livro"
+            id="autor_livro"
+            class="input__informacao-livro"
+            placeholder="Ex.: Luciano Ramalho"
+            required
+          />
+
+          <label for="genero_livro" class="label__informacao-livro"
+            >Gênero:
+          </label>
+          <input
+            type="text"
+            name="genero_livro"
+            id="genero_livro"
+            class="input__informacao-livro"
+            placeholder="Ex.: Tecnologia"
+            requiered
+          />
+        </fieldset>
+
+        <fieldset class="informacoes-do-leitor">
+          <div class="situacao-caixa">
+            <label for="situacao" class="label__informacao-leitor"
+              >Situação:
+            </label>
+            <select
+              name="situacao"
+              id="situacao"
+              class="seletor__situacao"
+              required
+            >
+              <option selected desable value="">Escolha</option>
+              <option value="Lido" class="opcao__situacao">Lido</option>
+              <option value="Não lido" class="opcao__situacao">Não lido</option>
+              <option value="Lendo" class="opcao__situacao">Lendo</option>
+            </select>
+          </div>
+
+          <div class="estrelas-caixa">
+            <label for="estrelas" class="label__informacao-leitor"
+              >Estrelas:
+            </label>
+            <input
+              type="number"
+              name="estrelas"
+              id="estrelas"
+              class="input__informacao-livro--estrelas"
+              placeholder="Ex.: 5"
+            />
+          </div>
+
+          <div class="foto-caixa">
+            <label for="foto_livro" class="label__informacao-leitor"
+              >Foto de capa:</label
+            >
+            <input
+              type="file"
+              name="foto_livro"
+              id="foto_livro"
+              class="input__informacao-livro--foto"
+            />
+          </div>
+        </fieldset>
+
+        <fieldset class="opiniao">
+          <label for="opiniao" class="label__informacao-leitor"
+            >Opinião:
+          </label>
+          <textarea
+            name="opiniao"
+            id="opiniao"
+            class="textarea__opiniao"
+            placeholder="Ex.: Excelente livro para aprender boas práticas em Python."
+          ></textarea>
+        </fieldset>
+        <button type="submit" class="botao__formulario">Adicionar Livro</button>
+      </form>
+    </section>
+  </main>
+</body>
 {% endblock %}
