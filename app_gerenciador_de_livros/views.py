@@ -87,4 +87,9 @@ def adiciona_livro(request):
 
 
 def edita_livro(request, id_livro):
-    pass
+    livro_selecionado = get_object_or_404(Livros, pk=id_livro)
+    livro_a_editar = {
+        'livro': livro_selecionado
+    }
+
+    return render(request, 'edita_livro.html', livro_a_editar)
