@@ -63,4 +63,13 @@ def adiciona_livro(request):
         if not nome.strip() or not editora.strip() or not autor.strip() or not genero.strip() or not situacao.strip():
             return redirect('add_livro')
 
+        if situacao == 'Lido':
+            situacao_id = 1
+
+        elif situacao == 'Não Lido':
+            situacao_id = 2
+
+        elif situacao == 'Lendo':
+            situacao_id = 3
+
     return render(request, 'adiciona_livro.html')
