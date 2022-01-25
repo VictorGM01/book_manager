@@ -1,0 +1,19 @@
+.input__informacao-livro--estrelas {
+  background-color: var(--azul-celeste-escuro);
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+
+  height: 3.0625rem;
+
+  padding-left: 0.8125rem;
+}
+
+.input__informacao-livro--estrelas:active {
+  background: var(--azul-bem-claro);
+}
