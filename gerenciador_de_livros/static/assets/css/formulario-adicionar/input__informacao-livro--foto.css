@@ -1,0 +1,25 @@
+.input__informacao-livro--foto {
+  background-color: var(--azul-celeste-escuro);
+
+  border: none;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  color: var(--esbranquicado);
+
+  height: 3.0625rem;
+
+  padding-bottom: 0.8rem;
+
+  padding-left: 0.8125rem;
+
+  padding-right: 0.8125rem;
+
+  padding-top: 0.8rem;
+}
+
+.input__informacao-livro--foto:active {
+  background: var(--azul-bem-claro);
+}
