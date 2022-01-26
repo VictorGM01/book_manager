@@ -113,3 +113,5 @@ def atualiza_livro(request):
         livro_a_editar.situacao = request.POST['situacao']
         livro_a_editar.estrelas = request.POST['estrelas']
         livro_a_editar.opiniao = request.POST['opiniao']
+        if 'foto_livro' in request.FILES:
+            livro_a_editar.foto_do_livro = request.FILES['foto_livro']
