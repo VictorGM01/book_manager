@@ -98,3 +98,7 @@ def edita_livro(request, id_livro):
     }
 
     return render(request, 'edita_livro.html', livro_a_editar)
+
+
+def atualiza_livro(request):
+    pass
