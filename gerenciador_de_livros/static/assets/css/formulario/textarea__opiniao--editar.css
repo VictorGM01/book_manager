@@ -1,0 +1,29 @@
+.textarea__opiniao--editar {
+  background-color: var(--azul-celeste-escuro);
+
+  border: none;
+
+  border-radius: 8px;
+
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+
+  font-weight: 100;
+
+  height: 10rem;
+
+  padding: 0.8125rem 0 0 0.8125rem;
+
+  resize: vertical;
+
+  width: 28rem;
+}
+
+.textarea__opiniao--editar:active {
+  background: var(--azul-bem-claro);
+}
+
+.textarea__opiniao--editar:focus {
+  background: var(--preto);
+}
