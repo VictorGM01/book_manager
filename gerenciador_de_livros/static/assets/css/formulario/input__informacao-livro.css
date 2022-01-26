@@ -4,6 +4,8 @@
   border: none;
   border-radius: 8px;
 
+  box-sizing: border-box;
+
   color: var(--esbranquicado);
 
   font-family: 'Roboto Mono', monospace;
