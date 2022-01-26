@@ -28,3 +28,7 @@
 .input__informacao-livro:active {
   background: var(--azul-bem-claro);
 }
+
+.input__informacao-livro:focus {
+  background: var(--preto);
+}
