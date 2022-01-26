@@ -125,3 +125,6 @@ def atualiza_livro(request):
         elif situacao == 'Lendo':
             livro_a_editar.situacao_id = 3
 
+        livro_a_editar.save()
+
+        return redirect(f'/{livro_id}')
