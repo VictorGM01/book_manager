@@ -1,0 +1,5 @@
+.opiniao__foto-do-livro {
+  display: flex;
+
+  flex-direction: column;
+}
