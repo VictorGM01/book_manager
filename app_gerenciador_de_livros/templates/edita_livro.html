@@ -87,6 +87,7 @@
       href="{% static '/assets/css/formulario/textarea__opiniao.css'%}"
     />
 {% endblock %}
+{% block body %}
 <body>
   {% include 'partials/_header.html' %}
   <main class="principal">
@@ -163,9 +164,16 @@
               required
             >
               <option selected value="{{ livro.situacao }}">{{ livro.situacao }}</option>
-              <option value="Lido" class="opcao__situacao">Lido</option>
+              {% if livro.situacao_id == 1 %}
               <option value="Não lido" class="opcao__situacao">Não lido</option>
               <option value="Lendo" class="opcao__situacao">Lendo</option>
+              {% elif livro.situacao_id == 2 %}
+              <option value="Lendo" class="opcao__situacao">Lendo</option>
+              <option value="Lido" class="opcao__situacao">Lido</option>
+              {% else %}
+              <option value="Lido" class="opcao__situacao">Lido</option>
+              <option value="Não lido" class="opcao__situacao">Não lido</option>
+              {% endif %}
             </select>
           </div>
 
@@ -231,3 +239,4 @@
   </main>
   {% include 'partials/_footer.html' %}
 </body>
+{% endblock %}
