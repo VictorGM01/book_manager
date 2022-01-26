@@ -93,7 +93,8 @@
     </section>
 
     <section class="formulario">
-      <form action="" method="post" enctype="multipart/form-data">
+      <form action="" method="post" enctype="multipart/form-data"> {% csrf_token %}
+        <input type="text" name="receita_id" value="{{livro.id}}" hidden>
         <fieldset class="informacoes-do-livro">
           <label for="nome_livro" class="label__informacao-livro"
             >Nome do Livro:
@@ -104,6 +105,7 @@
             id="nome_livro"
             class="input__informacao-livro"
             placeholder="Ex.: Python Fluente"
+            value="{{ livro.nome_do_livro }}"
             required
           />
 
@@ -115,6 +117,7 @@
             name="editora_livro"
             class="input__informacao-livro"
             placeholder="Ex.: Novatec"
+            value="{{ livro.editora_do_livro }}"
             required
           />
 
@@ -127,6 +130,7 @@
             id="autor_livro"
             class="input__informacao-livro"
             placeholder="Ex.: Luciano Ramalho"
+            value="{{ livro.autor }}"
             required
           />
 
@@ -139,6 +143,7 @@
             id="genero_livro"
             class="input__informacao-livro"
             placeholder="Ex.: Tecnologia"
+            value="{{ livro.generos }}"
             required
           />
         </fieldset>
@@ -154,7 +159,7 @@
               class="seletor__situacao"
               required
             >
-              <option selected disabled value="">Escolha</option>
+              <option selected value="{{ livro.situacao }}">{{ livro.situacao }}</option>
               <option value="Lido" class="opcao__situacao">Lido</option>
               <option value="Não lido" class="opcao__situacao">Não lido</option>
               <option value="Lendo" class="opcao__situacao">Lendo</option>
@@ -171,12 +176,13 @@
               id="estrelas"
               class="input__informacao-livro--estrelas"
               placeholder="Ex.: 5"
+              value="{{ livro.estrelas }}"
             />
           </div>
 
           <div class="foto-caixa">
             <label for="foto_livro" class="label__informacao-leitor"
-              >Foto de capa:</label
+              >Adicionar nova foto:</label
             >
             <input
               type="file"
@@ -194,7 +200,7 @@
             >
             <div class="opiniao__imagem-do-livro">
               <img
-                src="/gerenciador_de_livros/static/assets/img/ilustracao-livros.png"
+                src="{{ livro.foto_do_livro.url }}"
                 alt=""
                 class="imagem-do-livro"
                 width="150px"
@@ -211,7 +217,7 @@
               id="opiniao"
               class="textarea__opiniao--editar"
               placeholder="Ex.: Excelente livro para aprender boas práticas em Python."
-            ></textarea>
+            >{{ livro.opiniao }}</textarea>
           </div>
         </fieldset>
         <div class="caixa-botao">
