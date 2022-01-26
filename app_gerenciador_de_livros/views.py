@@ -103,10 +103,13 @@ def edita_livro(request, id_livro):
 def atualiza_livro(request):
     if request.method == 'POST':
         livro_id = request.POST['livro_id']
-        nome_livro = request.POST['nome_livro']
-        editora = request.POST['editora_livro']
-        autor = request.POST['autor_livro']
-        genero = request.POST['genero_livro']
-        situacao = request.POST['situacao']
-        estrelas = request.POST['estrelas']
-        opiniao = request.POST['opiniao']
+
+        livro_a_editar = Livros.objects.get(pk=livro_id)
+
+        livro_a_editar.nome_do_livro = request.POST['nome_livro']
+        livro_a_editar.editora_do_livro = request.POST['editora_livro']
+        livro_a_editar.autor = request.POST['autor_livro']
+        livro_a_editar.generos = request.POST['genero_livro']
+        livro_a_editar.situacao = request.POST['situacao']
+        livro_a_editar.estrelas = request.POST['estrelas']
+        livro_a_editar.opiniao = request.POST['opiniao']
