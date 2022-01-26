@@ -21,3 +21,7 @@
 .input__informacao-livro--estrelas:active {
   background: var(--azul-bem-claro);
 }
+
+.input__informacao-livro--estrelas:focus {
+  background: var(--preto);
+}

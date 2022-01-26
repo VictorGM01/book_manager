@@ -23,3 +23,7 @@
 .textarea__opiniao:active {
   background: var(--azul-bem-claro);
 }
+
+.textarea__opiniao:focus {
+  background: var(--preto);
+}
