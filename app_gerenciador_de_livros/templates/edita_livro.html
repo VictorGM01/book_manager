@@ -1,91 +1,94 @@
-{% extends 'base.html' %} {% load static %} {% block link %}
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/situacao-caixa.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/seletor__situacao.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/label__informacao-livro.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/label__informacao-leitor.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/input__informacao-livro.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/input__informacao-livro--foto.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/input__informacao-livro--estrelas.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/informacoes-do-livro.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/informacoes-do-leitor.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/foto-caixa.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/formulario.css'%}"
-/>
-<link rel="stylesheet" href="{% static '/assets/css/formulario/form.css'%}" />
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/estrelas-caixa.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/botao__formulario.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/caixa-botao.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/foto-caixa.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/opiniao__editar.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/opiniao__foto-do-livro.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/opiniao__imagem-do-livro.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/opiniao__textarea.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/textarea__opiniao--editar.css'%}"
-/>
-<link
-  rel="stylesheet"
-  href="{% static '/assets/css/formulario/textarea__opiniao.css'%}"
-/>
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/situacao-caixa.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/seletor__situacao.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/label__informacao-livro.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/label__informacao-leitor.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/input__informacao-livro.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/input__informacao-livro--foto.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/input__informacao-livro--estrelas.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/informacoes-do-livro.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/informacoes-do-leitor.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/foto-caixa.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/formulario.css'%}"
+    />
+    <link rel="stylesheet" href="{% static '/assets/css/formulario/form.css'%}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/estrelas-caixa.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/botao__formulario.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/caixa-botao.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/foto-caixa.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/opiniao__editar.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/opiniao__foto-do-livro.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/opiniao__imagem-do-livro.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/opiniao__textarea.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/textarea__opiniao--editar.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static '/assets/css/formulario/textarea__opiniao.css'%}"
+    />
 {% endblock %}
 <body>
+  {% include 'partials/_header.html' %}
   <main class="principal">
     <section class="bloco-titulo">
       <h1 class="titulo">Edite as informações do livro:</h1>
@@ -226,4 +229,5 @@
       </form>
     </section>
   </main>
+  {% include 'partials/_footer.html' %}
 </body>
