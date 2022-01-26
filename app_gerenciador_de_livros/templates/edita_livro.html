@@ -98,7 +98,7 @@
 
     <section class="formulario">
       <form action="{% url 'atualiza_livro' %}" method="post" enctype="multipart/form-data"> {% csrf_token %}
-        <input type="text" name="receita_id" value="{{livro.id}}" hidden>
+        <input type="text" name="livro_id" value="{{livro.id}}" hidden>
         <fieldset class="informacoes-do-livro">
           <label for="nome_livro" class="label__informacao-livro"
             >Nome do Livro:

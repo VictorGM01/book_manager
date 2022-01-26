@@ -101,4 +101,12 @@ def edita_livro(request, id_livro):
 
 
 def atualiza_livro(request):
-    pass
+    if request.method == 'POST':
+        livro_id = request.POST['livro_id']
+        nome_livro = request.POST['nome_livro']
+        editora = request.POST['editora_livro']
+        autor = request.POST['autor_livro']
+        genero = request.POST['genero_livro']
+        situacao = request.POST['situacao']
+        estrelas = request.POST['estrelas']
+        opiniao = request.POST['opiniao']
