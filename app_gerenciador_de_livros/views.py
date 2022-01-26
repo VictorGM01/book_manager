@@ -129,3 +129,6 @@ def atualiza_livro(request):
         livro_a_editar.save()
 
         return redirect(f'/{livro_id}')
+
+    else:
+        return redirect('index')
