@@ -101,6 +101,7 @@ def edita_livro(request, id_livro):
 
 
 def atualiza_livro(request):
+    """Salva alterações realizadas na página de edição"""
     if request.method == 'POST':
         livro_id = request.POST['livro_id']
 
