@@ -15,3 +15,7 @@
 
   padding-left: 0.8125rem;
 }
+
+.seletor__situacao:focus {
+  background: var(--preto);
+}
