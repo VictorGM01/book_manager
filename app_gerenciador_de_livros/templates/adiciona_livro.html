@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% load static %} {% block link %}
+{% extends 'base.html' %}
+{% load static %}
+{% block link %}
 
 <link
   rel="stylesheet"
@@ -63,9 +65,10 @@
 />
 <link
   rel="stylesheet"
-  href="/gerenciador_de_livros/static/assets/css/formulario/caixa-botao.css"
+  href="{% static '/assets/css/formulario/caixa-botao.css'%}"
 />
-{% endblock %} {% block body %}
+{% endblock %}
+{% block body %}
 <body>
   {% include 'partials/_header.html' %}
   <main class="principal">
