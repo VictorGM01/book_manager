@@ -27,3 +27,7 @@
 .input__informacao-livro--foto:active {
   background: var(--azul-bem-claro);
 }
+
+.input__informacao-livro--foto:focus {
+  background: var(--preto);
+}
