@@ -132,3 +132,10 @@ def atualiza_livro(request):
 
     else:
         return redirect('index')
+
+
+def deleta_livro(request, id_livro):
+    """Deleta livro selecionado"""
+    livro_a_deletar = get_object_or_404(Livros, pk=id_livro)
+    livro_a_deletar.delete()
+    return redirect('index')

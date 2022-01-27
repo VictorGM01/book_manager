@@ -10,5 +10,6 @@ urlpatterns = [
     path('marcar-como-lido/<int:id_livro>', views.marcar_como_lido, name='marcar_como_lido'),
     path('adiciona/livro', views.adiciona_livro, name='add_livro'),
     path('edita/<int:id_livro>', views.edita_livro, name='edita_livro'),
-    path('atualiza_livro', views.atualiza_livro, name='atualiza_livro')
+    path('atualiza_livro', views.atualiza_livro, name='atualiza_livro'),
+    path('deleta/<int:id_livro>', views.deleta_livro, name='deleta_livro'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
