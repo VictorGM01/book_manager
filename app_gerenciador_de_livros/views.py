@@ -78,7 +78,7 @@ def adiciona_livro(request):
         if situacao == 'Lido':
             situacao_id = 1
 
-        elif situacao == 'Não Lido':
+        elif situacao == 'Não lido':
             situacao_id = 2
 
         elif situacao == 'Lendo':
