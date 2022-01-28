@@ -80,11 +80,19 @@
       >
     </section>
     {% endif %}]
+    {% if livros.has_other_pages %}
     <div class="principal__paginacao">
       <ul class="principal__paginacao__lista">
+      {% if livros.has_previous %}
         <li class="paginacao__lista__item">
-          <a href="#" class="paginacao__lista__item__link"> « </a>
+          <a href="?page={{ livros.previous_page_number }}" class="paginacao__lista__item__link"> « </a>
         </li>
+      {% else %}
+        <li class="paginacao__lista__item">
+          <a class="paginacao__lista__item__link"> « </a>
+        </li>
+      {% endif %}
+
         <li class="paginacao__lista__item">
           <a href="#" class="paginacao__lista__item__link"> 1 </a>
         </li>
@@ -100,6 +108,7 @@
         </li>
       </ul>
     </div>
+    {% endif %}
   </main>
 
   {% include 'partials/_footer.html' %}
