@@ -103,8 +103,14 @@
         </li>
         {% endif %}
       {% endfor %}
+      {% if livros.has_next %}
         <li class="paginacao__lista__item">
-          <a href="#" class="paginacao__lista__item__link"> » </a>
+          <a href="?page={{ livros.next_page_number }}" class="paginacao__lista__item__link"> » </a>
+        </li>
+      {% else %}
+        <li class="paginacao__lista__item">
+          <a class="paginacao__lista__item__link"> » </a>
+      {% endif %}
         </li>
       </ul>
     </div>
