@@ -42,8 +42,10 @@
     </section>
 
     <section class="bloco-livros">
-      {% if livros %} {% for livro in livros %} {% include
-      'partials/_bloco_livro.html' %} {% endfor %}
+      {% if livros %}
+      {% for livro in livros %}
+      {% include 'partials/_bloco_livro.html' %}
+      {% endfor %}
       <div class="rodape__adiciona" id="add-scroll">
         <a
           href="{% url 'add_livro' %}"
@@ -58,6 +60,26 @@
         </a>
       </div>
     </section>
+    {% else %}
+    <section class="principal__primeiro-acesso">
+      <div class="principal__primeiro-acesso--imagem">
+        <img
+          class="primeiro-acesso__imagem"
+          src="{%  static '/assets/img/icone-livro-adicionar.png' %}"
+          alt="Ícone de adicionar o primeiro livro"
+        />
+      </div>
+      <h5 class="principal__primeiro-acesso--titulo">
+        Você ainda não catalogou nenhum livro!<br />
+      </h5>
+      <a
+        class="principal__primeiro-acesso--link"
+        href="{% url 'add_livro' %}"
+        title="Adicione seu primeiro livro"
+        >Adicione seu primeiro livro</a
+      >
+    </section>
+    {% endif %}]
     <div class="principal__paginacao">
       <ul class="principal__paginacao__lista">
         <li class="paginacao__lista__item">
@@ -78,26 +100,6 @@
         </li>
       </ul>
     </div>
-    {% else %}
-    <section class="principal__primeiro-acesso">
-      <div class="principal__primeiro-acesso--imagem">
-        <img
-          class="primeiro-acesso__imagem"
-          src="{%  static '/assets/img/icone-livro-adicionar.png' %}"
-          alt="Ícone de adicionar o primeiro livro"
-        />
-      </div>
-      <h5 class="principal__primeiro-acesso--titulo">
-        Você ainda não catalogou nenhum livro!<br />
-      </h5>
-      <a
-        class="principal__primeiro-acesso--link"
-        href="{% url 'add_livro' %}"
-        title="Adicione seu primeiro livro"
-        >Adicione seu primeiro livro</a
-      >
-    </section>
-    {% endif %}
   </main>
 
   {% include 'partials/_footer.html' %}
