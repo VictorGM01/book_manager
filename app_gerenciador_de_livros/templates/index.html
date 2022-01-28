@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block link %}
+{% extends 'base.html' %} {% load static %} {% block link %}
 <link
   rel="stylesheet"
   href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso.css'%}"
@@ -17,6 +15,22 @@
   rel="stylesheet"
   href="{% static '/assets/css/primeiro-acesso/principal__primeiro-acesso--imagem.css'%}"
 />
+<link
+  rel="stylesheet"
+  href="/gerenciador_de_livros/static/assets/css/principal/paginacao/principal__paginacao.css"
+/>
+<link
+  rel="stylesheet"
+  href="/gerenciador_de_livros/static/assets/css/principal/paginacao/principal__paginacao__lista.css"
+/>
+<link
+  rel="stylesheet"
+  href="/gerenciador_de_livros/static/assets/css/principal/paginacao/paginacao__lista__item.css"
+/>
+<link
+  rel="stylesheet"
+  href="/gerenciador_de_livros/static/assets/css/principal/paginacao/paginacao__lista__item__link.css"
+/>
 {% endblock %} {% block body %}
 <body>
   {% include 'partials/_header.html' %}
@@ -28,10 +42,8 @@
     </section>
 
     <section class="bloco-livros">
-      {% if livros %}
-          {% for livro in livros %}
-              {% include 'partials/_bloco_livro.html' %}
-          {% endfor %}
+      {% if livros %} {% for livro in livros %} {% include
+      'partials/_bloco_livro.html' %} {% endfor %}
       <div class="rodape__adiciona" id="add-scroll">
         <a
           href="{% url 'add_livro' %}"
@@ -46,6 +58,26 @@
         </a>
       </div>
     </section>
+    <div class="principal__paginacao">
+      <ul class="principal__paginacao__lista">
+        <li class="paginacao__lista__item">
+          <a href="#" class="paginacao__lista__item__link"> « </a>
+        </li>
+        <li class="paginacao__lista__item">
+          <a href="#" class="paginacao__lista__item__link"> 1 </a>
+        </li>
+        <li class="paginacao__lista__item">
+          <a href="#" class="paginacao__lista__item__link"> 2 </a>
+        </li>
+        <li class="paginacao__lista__item">
+          <a href="#" class="paginacao__lista__item__link"> 3 </a>
+        </li>
+
+        <li class="paginacao__lista__item">
+          <a href="#" class="paginacao__lista__item__link"> » </a>
+        </li>
+      </ul>
+    </div>
     {% else %}
     <section class="principal__primeiro-acesso">
       <div class="principal__primeiro-acesso--imagem">
