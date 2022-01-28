@@ -97,14 +97,12 @@
         <li class="paginacao__lista__item">
           <a class="paginacao__lista__item__link">{{ pagina }}</a>
         </li>
+        {% else %}
+        <li class="paginacao__lista__item">
+          <a href="?page={{ pagina }}" class="paginacao__lista__item__link">{{ pagina }}</a>
+        </li>
         {% endif %}
-        <li class="paginacao__lista__item">
-          <a href="#" class="paginacao__lista__item__link"> 2 </a>
-        </li>
-        <li class="paginacao__lista__item">
-          <a href="#" class="paginacao__lista__item__link"> 3 </a>
-        </li>
-
+      {% endfor %}
         <li class="paginacao__lista__item">
           <a href="#" class="paginacao__lista__item__link"> » </a>
         </li>
