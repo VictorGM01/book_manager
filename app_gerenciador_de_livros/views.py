@@ -1,13 +1,20 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Livros
+from django.core.paginator import Paginator
 
 
 def index(request):
     """Página Principal da Aplicação"""
     livros = Livros.objects.order_by('nome_do_livro').all()
 
+    paginator = Paginator(livros, 9)
+
+    pagina = request.GET.get('page')
+
+    livros_por_pagina = paginator.get_page(pagina)
+
     dados = {
-        'livros': livros
+        'livros': livros_por_pagina
     }
 
     return render(request, 'index.html', dados)
