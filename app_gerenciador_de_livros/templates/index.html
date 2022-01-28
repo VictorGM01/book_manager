@@ -93,7 +93,7 @@
         </li>
       {% endif %}
       {% for pagina in livros.paginator.page_range %}
-        {% if receitas.number == pagina %}
+        {% if livros.number == pagina %}
         <li class="paginacao__lista__item">
           <a class="paginacao__lista__item__link">{{ pagina }}</a>
         </li>
