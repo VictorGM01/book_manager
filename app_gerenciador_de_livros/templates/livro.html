@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block link %}
+{% extends 'base.html' %} {% load static %} {% block link %}
 <link
   rel="stylesheet"
   href="{% static '/assets/css/informacoes/detalhes__lista__item.css'%}"
@@ -53,8 +51,19 @@
   <main class="principal">
     <section class="informacoes">
       <div class="informacoes__link">
-        <a type="button" href="{% url 'edita_livro' livro.id %}" class="informacoes__link--editar-livro">
+        <a
+          type="button"
+          href="{% url 'edita_livro' livro.id %}"
+          class="informacoes__link--editar-livro"
+        >
           Editar livro
+        </a>
+        <a
+          type="button"
+          href="{% url 'edita_livro' livro.id %}"
+          class="informacoes__link--excluir-livro"
+        >
+          Excluir livro
         </a>
       </div>
       <h2 class="informacoes__titulo">{{ livro.nome_do_livro }}</h2>
@@ -76,13 +85,15 @@
           </li>
           {% if livro.situacao_id == 2 or livro.situacao_id == 3%}
           <li class="detalhes__lista__item">
-            <a type="button" href="{% url 'marcar_como_lido' livro.id %}" class="informacoes__link--editar-livro">
+            <a
+              type="button"
+              href="{% url 'marcar_como_lido' livro.id %}"
+              class="informacoes__link--editar-livro"
+            >
               Marcar como lido
             </a>
           </li>
-          {% else %}
-          {% endif %}
-
+          {% else %} {% endif %}
         </ul>
 
         <div class="informacoes__imagem">
@@ -182,9 +193,8 @@
       </section>
     </section>
     <section class="bloco-livros">
-      {% for livro in sugestoes %}
-          {% include 'partials/_bloco_livro.html' %}
-      {% endfor %}
+      {% for livro in sugestoes %} {% include 'partials/_bloco_livro.html' %} {%
+      endfor %}
     </section>
   </main>
 
