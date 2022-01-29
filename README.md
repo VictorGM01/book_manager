@@ -14,6 +14,15 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
     <img src="https://img.shields.io/static/v1?label=DJANGO&message=4.0.1&color=green&style=for-the-badge"/>
 </h1>
 
+## Funcionalidades
+- [x] Adicionar novo livro
+- [x] Editar livro
+- [x] Excluir livro
+- [x] Visualizar informações de cada livro
+- [x] Página de busca: possibilita a pesquisa a partir do nome do livro
+- [x] Paginação: Mostra 9 livros por página na página principal
+- [x] Mudar situação do livro de "Não Lido" ou "Lendo" para Lido através de um botão, sem necessidade de abrir formulário de edição
+
 ## Status do Projeto :warning:
 #### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
 
@@ -30,7 +39,7 @@ Além disso, é interessante instalar uma IDE para conseguir rodar a aplicação
 ## Desenvolvedores :octocat:
 <table>
     <tr>
-    <td align="center"><a href="https://github.com/VictorGM01"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86068797?v=4" width="100px;" alt=""/><br /><sub><b>Victor G. Marques</b></sub></a><br /><a href="https://github.com/VictorGM01" title="Victor">👨‍🚀💻</a></td>
-    <td align="center"><a href="https://github.com/raphaelaferraz"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86068799?v=4" width="100px;" alt=""/><br /><sub><b>Raphaela G. Ferraz</b></sub></a><br /><a href="https://github.com/raphaelaferraz" title="Raphaela">👨‍🚀💻</a></td>
+    <td align="center"><a href="https://github.com/VictorGM01"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86068797?v=4" width="100px;" alt=""/><br /><sub><b>Victor G. Marques</b></sub></a><br />Back-end</td>
+    <td align="center"><a href="https://github.com/raphaelaferraz"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86068799?v=4" width="100px;" alt=""/><br /><sub><b>Raphaela G. Ferraz</b></sub></a><br />Front-end</td>
     </tr>
 </table>
