@@ -5,7 +5,7 @@ Sistema web para gerenciamento e catalogação de livros, possibilitando o armaz
 destes livros em um banco de dados PostgreSQL e facilitando a vida das pessoas que, como nós ([Victor](https://github.com/VictorGM01)
 e [Rapha](https://github.com/raphaelaferraz)), não possuem muito controle sobre seus livros 😅
 
-Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django com a linguagem de programação Python e, para o front-end, HTML5 e CSS.
+Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django com a linguagem de programação Python e, para o front-end, HTML5, CSS3 e JavaScript.
 
 <h1 align="center">
     <img src="https://img.shields.io/static/v1?label=DJANGO&message=FRAMEWORK&color=brightgreen&style=for-the-badge&logo=DJANGO&logoColor=green"/>
@@ -22,6 +22,7 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
 - [x] Página de busca: possibilita a pesquisa a partir do nome do livro
 - [x] Paginação: Mostra 9 livros por página na página principal
 - [x] Mudar situação do livro de "Não Lido" ou "Lendo" para Lido através de um botão, sem necessidade de abrir formulário de edição
+- [x] Recomendação de livros, com base no gênero do livro que o usuário está visualizando
 
 ## Status do Projeto :warning:
 #### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
