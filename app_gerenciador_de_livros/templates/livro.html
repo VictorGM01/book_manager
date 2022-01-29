@@ -29,7 +29,7 @@
 />
 <link
   rel="stylesheet"
-  href="/gerenciador_de_livros/static/assets/css/informacoes/informacoes__link--excluir-livro.css"
+  href="{% static '/assets/css/informacoes/informacoes__link--excluir-livro.css'%}"
 />
 <link
   rel="stylesheet"
@@ -197,8 +197,9 @@
       </section>
     </section>
     <section class="bloco-livros">
-      {% for livro in sugestoes %} {% include 'partials/_bloco_livro.html' %} {%
-      endfor %}
+      {% for livro in sugestoes %}
+        {% include 'partials/_bloco_livro.html' %}
+      {%endfor %}
     </section>
   </main>
 
