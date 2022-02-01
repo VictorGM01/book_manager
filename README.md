@@ -24,6 +24,11 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
 - [x] Mudar situação do livro de "Não Lido" ou "Lendo" para Lido através de um botão, sem necessidade de abrir formulário de edição
 - [x] Recomendação de livros, com base no gênero do livro que o usuário está visualizando
 
+
+## Demonstracao da Aplicacao 💻
+
+<img align="center" src="https://cdn.discordapp.com/attachments/887123408838615101/938178682797830244/demonstracao.png" alt="Foto de demonstração do site">
+
 ## Status do Projeto :warning:
 #### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
 
