@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Livros
+from .models import Livros, Generos
 from django.core.paginator import Paginator
 
 
@@ -94,7 +94,9 @@ def adiciona_livro(request):
 
         return redirect('index')
 
-    return render(request, 'adiciona_livro.html')
+    contexto = {"generos": Generos}
+
+    return render(request, 'adiciona_livro.html', contexto)
 
 
 def edita_livro(request, id_livro):

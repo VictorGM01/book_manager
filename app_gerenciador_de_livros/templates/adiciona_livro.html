@@ -123,14 +123,18 @@
           <label for="genero_livro" class="label__informacao-livro"
             >Gênero:
           </label>
-          <input
+          <select
             type="text"
             name="genero_livro"
             id="genero_livro"
             class="input__informacao-livro"
-            placeholder="Ex.: Tecnologia"
             required
-          />
+          >
+              {% for genero in generos.values %}
+                  <option value="{{ genero }}">{{ genero }}</option>
+              {% endfor %}
+          </select>
+
         </fieldset>
 
         <fieldset class="informacoes-do-leitor">
