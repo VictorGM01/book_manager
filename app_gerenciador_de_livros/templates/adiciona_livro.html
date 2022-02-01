@@ -130,7 +130,8 @@
             class="input__informacao-livro"
             required
           >
-              {% for genero in generos.values %}
+              <option selected disabled value="">Selecione</option>
+              {% for genero in generos %}
                   <option value="{{ genero }}">{{ genero }}</option>
               {% endfor %}
           </select>

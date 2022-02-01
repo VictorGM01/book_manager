@@ -94,7 +94,7 @@ def adiciona_livro(request):
 
         return redirect('index')
 
-    contexto = {"generos": Generos}
+    contexto = {"generos": sorted(Generos.values)}
 
     return render(request, 'adiciona_livro.html', contexto)
 
