@@ -1,0 +1,1 @@
+web: gunicorn gerenciador_de_livros.wsgi --log-file -
