@@ -121,7 +121,7 @@ def atualiza_livro(request):
         livro_a_editar.autor = request.POST['autor_livro']
         livro_a_editar.generos = request.POST['genero_livro']
         situacao = request.POST['situacao']
-        livro_a_editar.estrelas = request.POST['estrelas']
+        estrelas = request.POST['estrelas']
         livro_a_editar.opiniao = request.POST['opiniao']
         if 'foto_livro' in request.FILES:
             livro_a_editar.foto_do_livro = request.FILES['foto_livro']
@@ -135,8 +135,8 @@ def atualiza_livro(request):
         elif situacao == 'Lendo':
             livro_a_editar.situacao_id = 3
 
-        if livro_a_editar.estrelas == '':
-            estrelas = None
+        if estrelas == '':
+            livro_a_editar.estrelas = None
 
         livro_a_editar.save()
 
