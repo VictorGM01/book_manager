@@ -9,8 +9,6 @@ key/
 # Pasta do django
 static/admin
 
-# Pasta de imagens
-media/
 # C extensions
 *.so
 
