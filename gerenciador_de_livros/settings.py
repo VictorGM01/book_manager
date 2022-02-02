@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from key.key_django import KEY, USER, PASSWORD
 import dj_database_url
 import django_heroku
 
