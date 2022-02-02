@@ -209,6 +209,17 @@
             <label for="" class="label__informacao-leitor"
               >Foto de capa atual:</label
             >
+            {% if livro.foto_do_livro == '' %}
+                <div class="opiniao__imagem-do-livro">
+              <img
+                src="{% static 'assets/img/capa_padrao.jpg' %}"
+                alt=""
+                class="imagem-do-livro"
+                width="150px"
+                height="180px"
+              />
+            </div>
+            {% else %}
             <div class="opiniao__imagem-do-livro">
               <img
                 src="{{ livro.foto_do_livro.url }}"
@@ -218,6 +229,7 @@
                 height="180px"
               />
             </div>
+            {% endif %}
           </div>
           <div class="opiniao__textarea">
             <label for="opiniao" class="label__informacao-leitor"
