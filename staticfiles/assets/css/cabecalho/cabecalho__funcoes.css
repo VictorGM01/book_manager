@@ -1,0 +1,12 @@
+{% load static %}
+.cabecalho__funcoes {
+  align-items: center;
+
+  display: flex;
+
+  gap: 1.5625rem;
+
+  margin-right: 2.125rem;
+}
+
+

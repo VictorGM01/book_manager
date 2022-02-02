@@ -1,0 +1,21 @@
+.informacoes-do-leitor {
+  align-items: center;
+
+  border: none;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  gap: 1.2rem;
+
+  margin-bottom: 2rem;
+
+  margin-left: 0;
+
+  margin-right: 0;
+
+  padding: 0;
+
+  justify-content: center;
+}

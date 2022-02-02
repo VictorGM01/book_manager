@@ -1,0 +1,17 @@
+.cabecalho__funcoes-pesquisa {
+  color: var(--esbranquicado);
+
+  background-color: var(--azul-escuro-bg);
+  background-image: url("/static/assets/img/ilustracao-pesquisar.8acd10c0d0fc.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 8px;
+
+  font-family: 'Roboto Mono', monospace;
+
+  height: 2.2rem;
+
+  padding-left: 0.875rem;
+  padding-right: 1.5rem;
+}

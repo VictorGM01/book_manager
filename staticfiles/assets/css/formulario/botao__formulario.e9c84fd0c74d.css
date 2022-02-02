@@ -1,0 +1,33 @@
+.botao__formulario {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 73, 150, 1) 0%,
+    rgba(63, 110, 180, 1) 91%
+  );
+
+  border-radius: 8px;
+
+  border: none;
+
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+
+  font-weight: 100;
+
+  margin-top: 1.875rem;
+
+  padding: 0.5625rem 1.25rem;
+
+  text-align: center;
+
+  transition: all 3s ease;
+
+  width: 12rem;
+}
+
+.botao__formulario:hover {
+  cursor: pointer;
+
+  background: var(--azul-escuro-hover);
+}

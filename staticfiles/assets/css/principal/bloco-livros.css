@@ -1,0 +1,10 @@
+.bloco-livros {
+  display: flex;
+
+  justify-content: center;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 2.8125rem 2.4375rem 3rem 0;
+}
