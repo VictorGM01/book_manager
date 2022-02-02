@@ -70,11 +70,11 @@ WSGI_APPLICATION = 'gerenciador_de_livros.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'book_manager',
-        'USER': USER,
-        'PASSWORD': PASSWORD,
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd3a4od4akf0r8a',
+        'USER': 'ynbudntxqnesci',
+        'PASSWORD': '34ada47076a9129226969e946d4160d7dcc88a85b42c539f40d1acd12747a4a2',
+        'HOST': 'ec2-54-83-152-251.compute-1.amazonaws.com'
     }
 }
 
@@ -121,6 +121,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'gerenciador_de_livros/static')
 ]
 
+django_heroku.settings(locals())
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
@@ -132,5 +134,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configurações para os arquivos de mídia (imagens)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-django_heroku.settings(locals())
