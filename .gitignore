@@ -15,6 +15,7 @@ media/
 
 # Distribution / packaging
 .env
+gerenciador_de_livros/settings.ini
 .Python
 build/
 develop-eggs/
