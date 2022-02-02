@@ -1,0 +1,34 @@
+.input__informacao-livro {
+  background-color: var(--azul-celeste-escuro);
+
+  border: none;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+
+  font-weight: 100;
+
+  height: 3.0625rem;
+
+  margin-bottom: 2.3125rem;
+
+  padding-left: 0.8125rem;
+
+  width: 47.75rem;
+}
+
+.input__informacao-livro:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.input__informacao-livro:active {
+  background: var(--azul-bem-claro);
+}
+
+.input__informacao-livro:focus {
+  background: var(--preto);
+}

@@ -1,0 +1,9 @@
+.conteudo-livro__caixa-linha {
+  background-color: var(--azul-escuro-bg);
+
+  height: 1px;
+
+  margin: 1.25rem 0 1.25rem 0;
+
+  width: 18.125rem;
+}

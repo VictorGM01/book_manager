@@ -1,0 +1,25 @@
+.paginacao__lista__item__link {
+  border: 1px solid #dddddd;
+
+  color: var(--esbranquicado);
+
+  float: left;
+
+  padding: 8px 16px;
+
+  transition: background-color 0.3s;
+
+  text-decoration: none;
+}
+
+.paginacao__lista__item__link:focus {
+  background-color: var(--azul-bem-claro);
+
+  border: 1px solid var(--esbranquicado);
+
+  color: var(--preto);
+}
+
+.paginacao__lista__item__link:hover {
+  background-color: var(--azul-escuro-hover);
+}

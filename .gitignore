@@ -8,7 +8,6 @@ key/
 
 # Pasta do django
 static/admin
-/static/
 
 # Pasta de imagens
 media/

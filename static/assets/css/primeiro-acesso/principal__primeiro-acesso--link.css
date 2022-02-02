@@ -1,0 +1,29 @@
+.principal__primeiro-acesso--link {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 73, 150, 1) 0%,
+    rgba(63, 110, 180, 1) 91%
+  );
+
+  border-radius: 100px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  color: var(--esbranquicado);
+
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+
+  margin-top: 1.25rem;
+
+  padding: 1.5rem;
+
+  text-decoration: none;
+  transition: 0.5s all;
+
+  width: 18.75rem;
+}
+
+.principal__primeiro-acesso--link:hover {
+  background: var(--azul-escuro-hover);
+}

@@ -1,0 +1,10 @@
+.titulo--pesquisa-importante__sublinhado {
+  background-image: radial-gradient(
+    circle,
+    rgba(106, 6, 6, 1) 0%,
+    rgba(166, 52, 52, 1) 100%
+  );
+  height: 2px;
+
+  width: 47.75rem;
+}

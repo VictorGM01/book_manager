@@ -1,0 +1,5 @@
+.estrelas-caixa {
+  display: flex;
+  flex-direction: column;
+  width: 15.5rem;
+}
