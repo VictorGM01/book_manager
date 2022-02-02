@@ -30,7 +30,7 @@ Foi utilizado, para back-end, o banco de dados PostgreSQL e o framework Django c
 <img align="center" src="https://cdn.discordapp.com/attachments/887123408838615101/938178682797830244/demonstracao.png" alt="Foto de demonstração do site">
 
 ## Status do Projeto :warning:
-#### 🚧 👷🏻‍♂️ Em construção... 👷🏻‍♀️ 🚧
+####  Deploy Realizado ✅
 
 ## Pré Requisitos
 Antes de começar, é preciso que você tenha instalado na sua máquina as seguintes ferramentas:
@@ -40,7 +40,7 @@ Antes de começar, é preciso que você tenha instalado na sua máquina as segui
 Além disso, é interessante instalar uma IDE para conseguir rodar a aplicação de maneira simplificada. Recomendo o uso do [Pycharm](https://www.jetbrains.com/pycharm/download/#section=windows) ou do [VSCode](https://code.visualstudio.com/download)
 
 ## Como rodar a aplicação ▶
-##
+Acesse o link: [https://bookmanagerapp.herokuapp.com/](https://bookmanagerapp.herokuapp.com/)
 
 ## Desenvolvedores :octocat:
 <table>
