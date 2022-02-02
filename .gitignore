@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # key
+key/
 
 # Pasta do django
 static/admin
