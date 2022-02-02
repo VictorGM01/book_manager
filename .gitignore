@@ -8,6 +8,7 @@ key/
 
 # Pasta do django
 static/admin
+media/
 
 # C extensions
 *.so
