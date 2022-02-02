@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn gerenciador_de_livros.wsgi --log-file-
+web: gunicorn gerenciador_de_livros.wsgi
